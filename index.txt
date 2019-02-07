@@ -1,0 +1,7 @@
+<head>
+<title>Moscwa public storage</title>
+</head>
+<body>
+<h1>Moscwa's public storage</h1>
+<p>is to publish static files from <a href="https://github.com/moscwa/public-storage">github</a>.</p>
+</body>
