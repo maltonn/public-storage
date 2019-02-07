@@ -1,0 +1,13 @@
+ListX=[]
+ListY=[]
+document.addEventListener('click',function(e){
+  console.log(e.pageX,e.pageY)
+  ListX.push(e.pageX)
+  ListY.push(e.pageY)
+})
+document.addEventListener('keydown',function(e){
+  if(e.key=="b"){
+    ListX.pop()
+    ListY.pop()
+  }
+})

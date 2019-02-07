@@ -1,0 +1,63 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+div {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.4rem;
+  padding: 10px;
+}
+#qa {
+  position: absolute;
+  width: 90vw;
+  height: 100vh;
+  padding:0;
+  padding-left:10px;
+}
+#next {
+  z-index: 10;
+  position: absolute;
+  left: 90vw;
+  width: 10vmax;
+  height: 100vh;
+  cursor: pointer;
+  padding: 0;
+}
+#next >div{
+  position: absolute;
+  padding:0;
+  width:100%;
+  height:50%;
+}
+#correct{
+  top:0;
+  border-bottom: 2px solid black;
+}
+#wrong{
+  top:50%;
+}
+#total{
+  position: absolute;
+  left:0;
+  bottom: 0;
+  margin: 20px;
+}
+rt {
+  transition-duration: 300ms;
+}
+#option {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 10vw;
+  margin: 10px;
+  font-size: 1rem;
+}
