@@ -1,4 +1,4 @@
-DeCideContents(window.prompt('コンテンツ名を入力'))
+﻿DecideContents(window.prompt('コンテンツ名を入力'))
 qa.style.backgroundColor = qcol[0]
 next.style.backgroundColor = qcol[1]
 i = 0
