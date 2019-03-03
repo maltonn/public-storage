@@ -4,7 +4,6 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  padding: 0;
 }
 div {
   margin: 0;
@@ -13,14 +12,29 @@ div {
   align-items: center;
   color: white;
   font-size: 1.4rem;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
+}
+#select{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+#selection{
+  width: 50%;
+  height: 30%;
 }
 #qa {
   position: absolute;
-  width: 90vw;
+  width: 88vw;
   height: 100vh;
-  padding:0;
-  padding-left:10px;
+  padding-left:2vw;
 }
 #next {
   z-index: 10;
@@ -29,11 +43,9 @@ div {
   width: 10vmax;
   height: 100vh;
   cursor: pointer;
-  padding: 0;
 }
 #next >div{
   position: absolute;
-  padding:0;
   width:100%;
   height:50%;
 }
