@@ -1,10 +1,4 @@
-if(window.innerWidth<window.innerHeight){
-  window.alert('横持ち推奨です')
-}
-
 select.style.backgroundColor="#"+["d81159", "8f2d56", "218380", "fbb13c", "73d2de"][Math.floor(Math.random()*5)]
-
-
 
 qcol=[]
 acol=[]
