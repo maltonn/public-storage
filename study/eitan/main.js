@@ -7,7 +7,6 @@ var ques_lst=[]
 var ans_lst=[]
 var start_num=default_range[0]
 start.addEventListener('click',()=>{
-  sub.style.transform="translateX(100%)"
   sub.style.opacity="0"
   let v=range.value.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {return String.fromCharCode(s.charCodeAt(0) - 65248)})
   let rng=v.split('-')
@@ -15,7 +14,7 @@ start.addEventListener('click',()=>{
     if(rng[1]){
       ques_lst=english_lst.slice(Number(rng[0]-1),Number(rng[1]))
       ans_lst=japanese_lst.slice(Number(rng[0]-1),Number(rng[1]))
-      start_num=rng[0]
+      start_num=Number(rng[0])
     }else{
       ques_lst=english_lst.slice(default_range[0]-1,default_range[1])
       ans_lst=japanese_lst.slice(default_range[0]-1,default_range[1])
@@ -24,7 +23,7 @@ start.addEventListener('click',()=>{
     if(rng[1]){
       ques_lst=japanese_lst.slice(Number(rng[0]-1),Number(rng[1]))
       ans_lst=english_lst.slice(Number(rng[0]-1),Number(rng[1]))
-      start_num=rng[0]
+      start_num=Number(rng[0])
     }else{
       ques_lst=japanese_lst.slice(Number(default_range[0]-1),Number(default_range[1]))
       ans_lst=english_lst.slice(Number(default_range[0]-1),Number(default_range[1]))
