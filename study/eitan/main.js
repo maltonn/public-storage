@@ -8,6 +8,9 @@ var ans_lst=[]
 var start_num=default_range[0]
 start.addEventListener('click',()=>{
   sub.style.opacity="0"
+  setTimeout(()=>{
+    sub.style.display="none"
+  },500)
   let v=range.value.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {return String.fromCharCode(s.charCodeAt(0) - 65248)})
   let rng=v.split('-')
   if (mode.value=="1"){
