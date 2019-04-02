@@ -36,7 +36,7 @@ start.addEventListener('click',()=>{
       elm=document.createElement('img')
       elm.classList.add("activator")
       random=Math.floor(Math.random()*19)+1//0から19
-      elm.setAttribute('src','img/b'+random+".png");
+      elm.setAttribute('src','img/b'+random+".jpg");
       background_div.append(elm)
       break;
     case "2":
