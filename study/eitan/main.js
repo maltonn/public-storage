@@ -1,7 +1,7 @@
 if (window.innerWidth>window.innerHeight){
   window.alert('縦持ち推奨')
 }
-
+var back_color_num=null//背景が単色の場合にここに色が入る
 var default_range=[101,200]
 var ques_lst=[]
 var ans_lst=[]
@@ -38,13 +38,17 @@ start.addEventListener('click',()=>{
     case "1":
       elm=document.createElement('img')
       elm.classList.add("activator")
+      elm.id="background_img_or_col"
       random=Math.floor(Math.random()*19)+1//0から19
       elm.setAttribute('src','img/b'+random+".jpg");
       background_div.append(elm)
       break;
     case "2":
       elm=document.createElement('div')
-      elm.classList.add("activator",['red','blue','green','purple','pink','yellow','orange','indigo'][Math.floor(Math.random()*8)])
+      random=Math.floor(Math.random()*8)
+      elm.classList.add("activator",['red','blue','green','purple','pink','yellow','orange','indigo'][random])
+      elm.id="background_img_or_col"
+      back_color_num=random
       elm.style="width:100%;height:150px"
       background_div.append(elm)
       break;
@@ -64,6 +68,13 @@ var count = 0
 next.addEventListener('click', () => {
   ques.innerText = ques_lst[count]
   ques_num.innerText=count+start_num
+  if(back_color_num){
+    elm=document.getElementById('background_img_or_col')
+    elm.classList.remove(['red','blue','green','purple','pink','yellow','orange','indigo'][back_color_num])
+    random=Math.floor(Math.random()*8)
+    elm.classList.add("activator",['red','blue','green','purple','pink','yellow','orange','indigo'][random])
+    back_color_num=random
+  }
   setTimeout(() => {
     re_ques.innerText = ques_lst[count]
     ans.innerText = ans_lst[count]
