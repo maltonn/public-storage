@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
    var instances = M.FormSelect.init(elems);
  });
 
-
+params={}
 location.href.split('?')[1]||"s=201&e=260".split('&').forEach(e=>params[e.split('=')[0]]=e.split('=')[1])
 if (params['s']){
   range.value=params['s']+"-"+params['e']
