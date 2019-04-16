@@ -39,8 +39,8 @@ start.addEventListener('click',()=>{
       elm=document.createElement('img')
       elm.classList.add("activator")
       elm.id="background_img_or_col"
-      random=Math.floor(Math.random()*19)+1//0から19
-      elm.setAttribute('src','img/b'+random+".jpg");
+      random=Math.floor(Math.random()*19)+1//1から19
+      elm.setAttribute('src','img/b/'+random+".jpg");
       background_div.append(elm)
       break;
     case "2":
@@ -50,6 +50,18 @@ start.addEventListener('click',()=>{
       elm.id="background_img_or_col"
       back_color_num=random
       elm.style="width:100%;height:150px"
+      background_div.append(elm)
+      break;
+    case "rezero":
+      elm=document.createElement('img')
+      elm.classList.add("activator")
+      elm.id="background_img_or_col"
+      random=Math.floor(Math.random()*7)+1
+      if (random<=4){
+        elm.setAttribute('src','img/r/'+random+".png");
+      }else{
+        elm.setAttribute('src','img/r/'+random+".jpg");
+      }
       background_div.append(elm)
       break;
     default:
@@ -87,3 +99,17 @@ document.addEventListener('DOMContentLoaded', function() {
    var elems = document.querySelectorAll('select');
    var instances = M.FormSelect.init(elems);
  });
+
+
+location.href.split('?')[1]||"s=201&e=260".split('&').forEach(e=>params[e.split('=')[0]]=e.split('=')[1])
+if (params['s']){
+  range.value=params['s']+"-"+params['e']
+}
+if(params['t']){
+  if (params['t']=='r'){
+    let elm=document.createElement('option')
+    elm.value="rezero"
+    elm.innerText="リゼロ（限定）"
+    background.appendChild(elm)
+  }
+}
