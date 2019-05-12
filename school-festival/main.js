@@ -1,5 +1,5 @@
-table1 = "sf1_test"
-table2="sf2_test"
+table1 = "sf1"
+table2="sf2"
 current_result={}
 connected=false
 req = new Request('https://light-api.mybluemix.net/admin');
@@ -16,18 +16,14 @@ fetch(req)
     current_result=response
     connected=true
     loading.style.display="none"
-  })
-
-if(!document.cookie.indexOf('q=')+1){
-  f=setTimeout(()=>{
+    if(document.cookie.indexOf('q=')+1){
         if(connected){
           question1.innerHTML = '<canvas id="chart1" width="400" height="400"></canvas>'
           Drow('chart1',(current_result[table1]||{}),null)
-        }else{
-          f()
         }
-      },300)
-}
+    }
+  })
+
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   var instances = M.FormSelect.init(elems);
@@ -50,7 +46,6 @@ submit1.addEventListener('click', () => {
       }
     })
     .then(response => {
-      f=setTimeout(()=>{
         if(connected){
           tmp=select1.value.slice()
           question1.innerHTML = '<canvas id="chart1" width="400" height="400"></canvas>'
@@ -58,9 +53,8 @@ submit1.addEventListener('click', () => {
           document.cookie = 'q1=1;max-age=864000';//10日間
           loading.style.display="none"
         }else{
-          f()
+          window.alert('サーバーとの通信が確立されません。\n10秒後くらいにもう一度お試しください。')
         }
-      },300)
     })
 })
 
@@ -103,7 +97,6 @@ function Drow(id,result,new_val) {
       result[new_val]=1
     }
   }
-
 
   var ctx = document.getElementById(id).getContext('2d');
   var myChart = new Chart(ctx, {
