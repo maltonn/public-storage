@@ -18,9 +18,16 @@ fetch(req)
     loading.style.display="none"
   })
 
-console.log(document.cookie)
-
-
+if(!document.cookie.indexOf('q=')+1){
+  f=setTimeout(()=>{
+        if(connected){
+          question1.innerHTML = '<canvas id="chart1" width="400" height="400"></canvas>'
+          Drow('chart1',(current_result[table1]||{}),null)
+        }else{
+          f()
+        }
+      },300)
+}
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   var instances = M.FormSelect.init(elems);
@@ -89,11 +96,14 @@ labels={
   3:"その他",
 }
 function Drow(id,result,new_val) {
-  if (result[new_val]){
-    result[new_val]+=1
-  }else{
-    result[new_val]=1
+  if (new_val){
+    if (result[new_val]){
+      result[new_val]+=1
+    }else{
+      result[new_val]=1
+    }
   }
+
 
   var ctx = document.getElementById(id).getContext('2d');
   var myChart = new Chart(ctx, {
