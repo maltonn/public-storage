@@ -17,10 +17,8 @@ fetch(req)
     connected=true
     loading.style.display="none"
     if(document.cookie.indexOf('q1=')+1){
-        if(connected){
-          question1.innerHTML = '<canvas id="chart1" width="400" height="400"></canvas>'
-          Drow('chart1',(current_result[table1]||{}),null)
-        }
+        question1.innerHTML = '<canvas id="chart1" width="400" height="400"></canvas>'
+        Drow('chart1',(current_result[table1]||{}),null)
     }
   })
 
