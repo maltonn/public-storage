@@ -1,0 +1,16 @@
+nav{
+  position: fixed;
+  top:0;
+}
+
+.progress{
+  margin: 0;
+  display: none;
+}
+#main{
+  margin-top: 60px;
+}
+#no-re-submit{
+  opacity: 0;
+  transition-duration: 300ms;
+}
