@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>htmlスライド</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/custom.css" />
+  <!--<link rel="stylesheet" href="css\customize\bakemonogatari\bakemonogatari.css" /> -->
+</head>
+
+<body class="bake">
+  <section id="top_slide" class="white">
+    <p>click to start ... </p>
+  </section>
+  <section id="intro" class="white">
+    <h1>自己紹介</h1>
+    <img id="icon" src="img/icon.png" />
+    <p class="align_left t2">
+      名前:松林由佑<br />
+      Twitter:@moscwa_<br />
+      誰得な開発をするのが好きな高校2年生。<br />
+      フロントエンジニアですが、最近自然言語処理とニューラルネットワークに興味があります。<br />
+      <span class="action">唯一の自慢は、リオオリンピックの聖火ランナーになったことがあること。</span>
+    </p>
+  </section>
+  <section id="intro2" class="white">
+    <h1>学歴</h1>
+    <ul class="actions-list large-font">
+      <li>私立滝高校2年</li>
+      <li>以上</li>
+    </ul>
+  </section>
+  <section id="slide1" class="white">
+    <h1 class="title">Techs</h1>
+    <ul class="actions-list large-font">
+      <li>HTML</li>
+      <li>CSS/Javascript</li>
+      <li>python/node.js</li>
+      <li>Flask/Django/Express</li>
+    </ul>
+  </section>
+  <!--
+  <section id="slide2" class="purple">
+    <h2>フロントエンジニアです。</h2>
+  </section>
+  <section id="slide3" class="purple">
+    <h2>HTMLが好きです。</h2>
+  </section>
+  <section id="slide3" class="purple">
+    <h3>どれくらい好きかというと・・</h3>
+  </section>
+  <section id="slide3-b" class="red">
+    <h2>スライドをパワポじゃなくてhtmlで作るくらい好きです！</h2>
+  </section>
+-->
+  <section id="getting_started" class="white">
+    <img id="qrcode" src="https://chart.apis.google.com/chart?chs=400x400&cht=qr&chl=vslide.tk&chld=H">
+    <h2 class="non-mrgin">vslide.tk</h2>
+  </section>
+  <section id="slide3-c" class="purple">
+    <h1>最近作ったやつ(1)</h1>
+    <img src="img/i2.png" class="t1"/>
+  </section>
+  <section id="slide5-c" class="purple">
+    <h1>最近作ったやつ(2)</h1>
+    <img src="img/i3.png" class="t1"/>
+  </section>
+  <section id="slide5-b" class="purple">
+    <h1>最近作ったやつ(3)</h1>
+    <img src="img/i1.png" class="t1"/>
+  </section>
+  <section id="slide4" class="black">
+    <h1>Editor</h1>
+    <ul class="actions-list large-font">
+      <li>VSCode</li>
+      <li>Atom</li>
+    </ul>
+  </section>
+  <section id="slide4-vote" class="vote black">
+    <p>皆さんはどうでしょうか？</p>
+    <canvas class="chart" width="400" height="400"></canvas>
+  </section>
+  <section id="slide4-b" class="red">
+    <div class="black-top"></div>
+    <h2>閑　話　休　題</h2>
+    <div class="black-bottom"></div>
+  </section>
+  <section id="slide5" class="black">
+    <h1>Interests</h1>
+    <ul class="actions-list large-font">
+      <li>Kaggle</li>
+      <li>Deep Learning</li>
+      <li>Morphalogical Analysis</li>
+    </ul>
+  </section>
+  <section id="slide6" class="red">
+    <h2 class="shake_right">が！</h2>
+  </section>
+  <section id="slide7" class="black">
+    <h3>セキュリティハッカソン....</h3>
+  </section>
+  <section id="slide8" class="white">
+    <h2>というわけで、今回の目標</h2>
+  </section>
+  <section id="slide9" class="white">
+    <h3>自然言語処理の勉強（研究）をしつつ<br />他の分野にも顔を突っ込んでみる</h3>
+  </section>
+  <section id="end" class="white">
+    <h3>ということで、<br />これから1年よろしくお願いします！</h3>
+  </section>
+  <script>
+    question_obj = {
+      'slide4-vote':['お気に入りのエディタは？','Vim','Emacs','VSCode','atom','SublimeText','その他']
+    }
+  </script>
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
