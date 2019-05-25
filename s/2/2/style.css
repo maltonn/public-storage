@@ -1,0 +1,119 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+div {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+#select{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+#selection{
+  width: 50%;
+  height: 30%;
+}
+#qa {
+  position: absolute;
+  width: 88vw;
+  height: 100vh;
+  padding-left:2vw;
+}
+#next {
+  z-index: 10;
+  position: absolute;
+  left: 90vw;
+  width: 10vmax;
+  height: 100vh;
+  cursor: pointer;
+}
+#next >div{
+  position: absolute;
+  width:100%;
+  height:50%;
+}
+#correct{
+  top:0;
+  border-bottom: 2px solid black;
+}
+#wrong{
+  top:50%;
+}
+#total{
+  position: absolute;
+  left:0;
+  bottom: 0;
+  margin: 20px;
+}
+#wrong_list_btn{
+  position: absolute;
+  top:0;
+  left:0;
+  margin: 20px;
+  z-index: 10;
+  padding: 5px;
+  font-size: 200%;
+  outline: 2px solid white;
+}
+#wrong_list{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: translateY(100%);
+  transition-duration: 300ms;
+  background-color: #2ecc71;
+  z-index:20;
+  flex-direction: column;
+  overflow: auto;
+}
+#close_wrong_list{
+  display: none;
+  position: fixed;
+  z-index: 30;
+  top:0;
+  right:0;
+  margin: 20px;
+  font-size: 250%;
+  color: white;
+}
+#wrong_list>div{
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #27ae60;
+}
+#wrong_list>div>div{
+  display: block;
+  width: 50%;
+  padding: 10px;
+  border-left:1px solid #27ae60;
+}
+rt {
+  transition-duration: 300ms;
+}
+#option {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 10vw;
+  margin: 10px;
+  font-size: 1rem;
+}
