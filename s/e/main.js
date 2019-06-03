@@ -69,8 +69,8 @@ function Main(){
   })
   save_btn.addEventListener('click',()=>{
     document.cookie = 'now='+i+';max-age=259200';//3日間
-    document.cookie = 'q_lst='+ques_list.join('ω')+';max-age=259200';//3日間//ωに得に意味はない
-    document.cookie = 'a_lst='+ans_list.join('ω')+';max-age=259200';//3日間
+    document.cookie = 'ques_lst='+ques_list.join('ω')+';max-age=259200';//3日間//ωに得に意味はない
+    document.cookie = 'ans_lst='+ans_list.join('ω')+';max-age=259200';//3日間
     done_saving.style.visibility="visible"
     setTimeout(()=>{
       done_saving.style.visibility="hidden"
