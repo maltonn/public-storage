@@ -18,7 +18,7 @@ function Main(){
   }
   qa.style.backgroundColor = qcol[0]
   next.style.backgroundColor = qcol[1]
-  i = params['isnew'] ? 0:GetcookieVal('now')||0
+  i = params['isnew'] ? 0:Number(GetcookieVal('now'))||0
   isAns = true
   total.innerText="残り"+(ques_list.length-i)+"問"
   qa.innerHTML = ques_list[i]
