@@ -21,7 +21,7 @@ function Main(){
   i = params['isnew'] ? 0:GetcookieVal('now')||0
   isAns = true
   total.innerText="残り"+ques_list.length+"問"
-  qa.innerHTML = ques_list[0]
+  qa.innerHTML = ques_list[i]
   qa.addEventListener('click', function() {
     if (isAns) {
       qa.innerHTML = ans_list[i]
