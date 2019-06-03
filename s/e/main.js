@@ -2,21 +2,18 @@ if (window.innerWidth<window.innerHeight){
   window.alert('横持ち推奨です')
 }
 params={};
-//(location.href.split('?')[1]||"s="+window.prompt('何番から？')+"&e="+window.prompt('何番まで？')).split('&').forEach(e=>params[e.split('=')[0]]=e.split('=')[1])
-params={'s':'444',"e":'544'}
-
+(location.href.split('?')[1]||GetcookieVal('ques_list')||"s="+window.prompt('何番から？')+"&e="+window.prompt('何番まで？')).split('&').forEach(e=>params[e.split('=')[0]]=e.split('=')[1])
 Main()
-
 
 function Main(){
   //DecideRandomColor()
   qcol=['#3498db','#2980b9']
   acol=['#e74c3c','#c0392b']
-  ques_list=english_lst.slice(Number(params['s']),Number(params['e'])-1)
-  ans_list=japanese_lst.slice(Number(params['s']),Number(params['e'])-1)
+  ques_list=GetcookieVal('ques_list')?GetcookieVal('ques_list').split('ω') : english_lst.slice(Number(params['s']-1),Number(params['e']))
+  ans_list=GetcookieVal('ans_list')?GetcookieVal('ans_list').split('ω') : japanese_lst.slice(Number(params['s']-1),Number(params['e']))
   qa.style.backgroundColor = qcol[0]
   next.style.backgroundColor = qcol[1]
-  i = 0
+  i = GetcookieVal('now')||0
   isAns = true
   total.innerText="残り"+ques_list.length+"問"
   qa.innerHTML = ques_list[0]
@@ -65,6 +62,15 @@ function Main(){
       close_wrong_list.style.display="block"
     },300)
   })
+  save_btn.addEventListener('click',()=>{
+    document.cookie = 'now='+i+';max-age=259200';//3日間
+    document.cookie = 'q_lst='+ques_list.join('ω')+';max-age=259200';//3日間//ωに得に意味はない
+    document.cookie = 'a_lst='+ans_list.join('ω')+';max-age=259200';//3日間
+    done_saving.style.visibility="visible"
+    setTimeout(()=>{
+      done_saving.style.visibility="hidden"
+    },1000)
+  })
 
   close_wrong_list.addEventListener('click',function(){
     this.style.display="none"
@@ -83,3 +89,6 @@ function Main(){
     total.innerText="残り"+ques_list.length+"問"
   }
 }
+function GetcookieVal(key){
+    return ((document.cookie + ';').match(key + '=([^¥S;]*)')||[])[1];
+  }
