@@ -2,7 +2,7 @@ if (window.innerWidth<window.innerHeight){
   window.alert('横持ち推奨です')
 }
 params={};
-(location.href.split('?')[1] ||"s=0&e=100").split('&').forEach(e=>params[e.split('=')[0]]=e.split('=')[1])
+(location.href.split('?')[1] ||"s=1&e=100").split('&').forEach(e=>params[e.split('=')[0]]=e.split('=')[1])
 Main()
 
 function Main(){
@@ -10,7 +10,7 @@ function Main(){
   qcol=['#3498db','#2980b9']
   acol=['#e74c3c','#c0392b']
   if(params['isnew']){
-    ques_list=params['isnew']?:GetcookieVal('ques_list')?GetcookieVal('ques_list').split('ω') : english_lst.slice(Number(params['s']-1),Number(params['e']))
+    ques_list=GetcookieVal('ques_list')?GetcookieVal('ques_list').split('ω') : english_lst.slice(Number(params['s']-1),Number(params['e']))
     ans_list=GetcookieVal('ans_list')?GetcookieVal('ans_list').split('ω') : japanese_lst.slice(Number(params['s']-1),Number(params['e']))
   }else{
     ques_list=english_lst.slice(Number(params['s']-1),Number(params['e']))
