@@ -10,11 +10,11 @@ function Main(){
   qcol=['#3498db','#2980b9']
   acol=['#e74c3c','#c0392b']
   if(params['isnew']){
-    ques_list=GetcookieVal('ques_list')?GetcookieVal('ques_list').split('ω') : english_lst.slice(Number(params['s']-1),Number(params['e']))
-    ans_list=GetcookieVal('ans_list')?GetcookieVal('ans_list').split('ω') : japanese_lst.slice(Number(params['s']-1),Number(params['e']))
-  }else{
     ques_list=english_lst.slice(Number(params['s']-1),Number(params['e']))
     ans_list=japanese_lst.slice(Number(params['s']-1),Number(params['e']))
+}else{
+  ques_list=GetcookieVal('ques_list')?GetcookieVal('ques_list').split('ω') : english_lst.slice(Number(params['s']-1),Number(params['e']))
+  ans_list=GetcookieVal('ans_list')?GetcookieVal('ans_list').split('ω') : japanese_lst.slice(Number(params['s']-1),Number(params['e']))
   }
   qa.style.backgroundColor = qcol[0]
   next.style.backgroundColor = qcol[1]
