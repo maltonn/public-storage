@@ -1,7 +1,7 @@
 html,
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   margin: 0;
 }
@@ -114,6 +114,16 @@ div {
   font-size: 200%;
   outline: 2px solid white;
 }
+#del_save_btn {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  margin: 20px;
+  z-index: 10;
+  padding: 5px;
+  font-size: 200%;
+  outline: 2px solid white;
+}
 
 #done_saving {
   visibility: hidden;
@@ -139,4 +149,8 @@ rt {
   right: 10vw;
   margin: 10px;
   font-size: 1rem;
+}
+
+.none{
+  display: none;
 }

@@ -2,25 +2,43 @@ if (window.innerWidth<window.innerHeight){
   window.alert('横持ち推奨です')
 }
 params={};
-(location.href.split('?')[1] ||"s=1&e=100").split('&').forEach(e=>params[e.split('=')[0]]=e.split('=')[1])
+try{
+  (location.href.split('?')[1]).split('&').forEach(e=>params[e.split('=')[0]]=e.split('=')[1])
+}catch(e){
+  console.log(e)
+}
+
+if(!params['s']){
+  params['s']=Number(window.prompt("開始番号を入力"))
+}if (!params['e']){
+    params['e']=Number(window.prompt("終了番号を入力"))
+}
 Main()
 
 function Main(){
   //DecideRandomColor()
   qcol=['#3498db','#2980b9']
   acol=['#e74c3c','#c0392b']
-  if(params['isnew']){
-    ques_list=english_lst.slice(Number(params['s']-1),Number(params['e']))
-    ans_list=japanese_lst.slice(Number(params['s']-1),Number(params['e']))
-}else{
-  ques_list=GetcookieVal('ques_list')?GetcookieVal('ques_list').split('ω') : english_lst.slice(Number(params['s']-1),Number(params['e']))
-  ans_list=GetcookieVal('ans_list')?GetcookieVal('ans_list').split('ω') : japanese_lst.slice(Number(params['s']-1),Number(params['e']))
+  if(params['r']){
+    ques_list=english_lst.slice(Number(params['s']),Number(params['e']+1))
+    ans_list=japanese_lst.slice(Number(params['s']),Number(params['e']+1))
+  }else{
+    if(GetcookieVal('ques_list')){
+      ques_list=GetcookieVal('ques_list').split('ω')
+      ans_list=GetcookieVal('ans_list').split('ω')
+      del_save_btn.classList.remove('none')
+    }else{
+        ques_list=english_lst.slice(Number(params['s']-1),Number(params['e']))
+        ans_list=japanese_lst.slice(Number(params['s']-1),Number(params['e']))
+    }
+
   }
+  left_num=ques_list.length
   qa.style.backgroundColor = qcol[0]
   next.style.backgroundColor = qcol[1]
-  i = params['isnew'] ? 0:Number(GetcookieVal('now'))||0
+  i = params['r'] ? 0:Number(GetcookieVal('now'))||0
   isAns = true
-  total.innerText="残り"+(ques_list.length-i)+"問"
+  total.innerText="残り"+ques_list.length+"問（新規"+left_num+"問）"
   qa.innerHTML = ques_list[i]
   qa.addEventListener('click', function() {
     if (isAns) {
@@ -37,19 +55,23 @@ function Main(){
   });
 
   correct.addEventListener('click', function() {
+    left_num--
     ques_list.splice(i, 1);
     ans_list.splice(i, 1);
     if (i >= ques_list.length) {
       i = 0
+      left_num=ques_list.length
     }
     GoToNextCard(i)
   });
 
 
   wrong.addEventListener('click', function() {
+    left_num--
     i++
     if (i >= ques_list.length) {
       i = 0
+      left_num=ques_list.length
     }
     GoToNextCard(i)
   });
@@ -77,6 +99,17 @@ function Main(){
     },1000)
   })
 
+  del_save_btn.addEventListener('click',()=>{
+    if(window.confirm('保存した過程を削除します')){
+      document.cokkie='ques_list=""max-age=0'
+      document.cokkie='ans_list=""max-age=0'
+      document.cokkie='now="";max-age=0'
+      del_save_btn.classList.add('none')
+    }
+
+
+  })
+
   close_wrong_list.addEventListener('click',function(){
     this.style.display="none"
     wrong_list.style.transform="translateY(100%)"
@@ -91,7 +124,7 @@ function Main(){
     } else {
       qa.innerHTML = ans_list[i]
     }
-    total.innerText="残り"+ques_list.length+"問"
+    total.innerText="残り"+ques_list.length+"問（新規"+left_num+"問）"
   }
 }
 function GetcookieVal(key){
