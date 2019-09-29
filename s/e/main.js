@@ -101,8 +101,8 @@ function Main(){
 
   del_save_btn.addEventListener('click',()=>{
     if(window.confirm('保存した過程を削除します')){
-      document.cokkie='ques_list=""max-age=0'
-      document.cokkie='ans_list=""max-age=0'
+      document.cokkie='ques_list=;max-age=0'
+      document.cokkie='ans_list=;max-age=0'
       document.cokkie='now="";max-age=0'
       del_save_btn.classList.add('none')
     }
