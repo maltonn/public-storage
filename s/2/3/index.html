@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>テスト用</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="select">
+      <select id="selection">
+        <option>教科を選択</option>
+      </select>
+  </div>
+  <div id="next">
+    <div id="correct">〇→</div>
+    <div id="wrong">×→</div>
+  </div>
+  <div id="qa"></div>
+  <div id="total"></div>
+  <div id="wrong_list_btn">
+    <i class="fas fa-align-left"></i>
+  </div>
+  <i id="close_wrong_list" class="far fa-times-circle"></i>
+  <div id="wrong_list"></div>
+  <script src="contents.js"></script>
+  <script src="main.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135452696-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  var dimensionValue = 'moscwa_dimesion_value';
+  gtag('config', 'UA-135452696-1');
+</script>
+
+</body>
+
+</html>
