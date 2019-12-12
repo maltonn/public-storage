@@ -1,0 +1,159 @@
+html,body{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+#face{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:400px;
+  height:400px;
+  margin:auto;
+}
+.eye{
+  position: absolute;
+  width:200px;
+  height:200px;
+  top:-5%;
+
+  background-color:#00A1FF;
+  border-radius: 50%;
+  z-index: 10;
+  animation-name: up_down;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+#eye1{
+  left:0;
+}
+#eye2{
+  right:0;
+}
+
+.eye::after{
+  content:'';
+  position: absolute;
+  top:12%;
+  left:12%;
+  width:76%;
+  height:76%;
+  border-radius:50%;
+  background-color: white;
+}
+
+.eye .inner_square{
+  position: absolute;
+  width:200px;
+  height:100px;
+  background-color: white;
+  transform-origin: bottom;
+}
+.eye .is1{
+  transform:rotate(40deg);
+}
+.eye .is2{
+  transform:rotate(-40deg);
+}
+
+#mouse{
+  position: absolute;
+  width:180px;
+  height:180px;
+  background-color:#00A1FF;
+  border-radius: 50%;
+  left:100px;
+  bottom:10%;
+  animation-name: up_down;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+#mouse::after{
+  content:'';
+  position: absolute;
+  top:12%;
+  left:12%;
+  width:76%;
+  height:76%;
+  border-radius:50%;
+  background-color: white;
+}
+
+#mouse .inner_square{
+  position: absolute;
+  width:180px;
+  height:90px;
+  background-color: white;
+  transform-origin: bottom;
+}
+#mouse .is1{
+  transform:rotate(35deg);
+}
+#mouse .is2{
+  transform:rotate(-35deg);
+}
+
+@keyframes up_down {
+  0%{
+    transform:translateY(0%);
+  }
+  50%{
+    transform:translateY(10%);
+  }
+  100%{
+    transform:translateY(0%);
+  }
+}
+
+.z{
+  position: absolute;
+  font-size: 50px;
+  color:#00A1FF;
+  top:10%;
+  right:15%;
+  transform: rotate(-45deg);
+  z-index:20;
+  font-weight: bold;
+
+  animation-name: zzz_animetion;
+  animation-duration: 2.8s;
+  animation-iteration-count: infinite;
+}
+#z1{
+  animation-delay: 0s;
+}
+#z2{
+  animation-delay: 0.7s;
+}
+#z3{
+  animation-delay: 1.4s;
+}
+
+@keyframes zzz_animetion {
+  to{
+    transform: translateX(120%) translateY(-120%) scale(2) rotate(-30deg);
+    opacity: 0;
+  }
+}
+
+
+#tmp1{
+  opacity:0;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:400px;
+  height:400px;
+  margin:auto;
+  border:5px solid black;
+  z-index:100;
+}
