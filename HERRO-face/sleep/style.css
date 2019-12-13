@@ -67,11 +67,10 @@ html,body{
   height:180px;
   background-color:#00A1FF;
   border-radius: 50%;
-  left:100px;
+  left:110px;
   bottom:10%;
   animation-name: up_down;
-  animation-duration: 3s;
-  animation-delay: 1s;
+  animation-duration: 3.5s;
   animation-iteration-count: infinite;
 }
 
@@ -118,13 +117,14 @@ html,body{
   color:#00A1FF;
   top:10%;
   right:15%;
-  transform: rotate(-45deg);
+  transform: rotate(-30deg);
   z-index:20;
   font-weight: bold;
 
   animation-name: zzz_animetion;
-  animation-duration: 2.8s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 #z1{
   animation-delay: 0s;
@@ -137,8 +137,22 @@ html,body{
 }
 
 @keyframes zzz_animetion {
-  to{
-    transform: translateX(120%) translateY(-120%) scale(2) rotate(-30deg);
+  0%{
+    opacity:0;
+  }
+  39%{
+    opacity:0;
+  }
+  40%{
+    transform: translateX(0) translateY(0) scale(1) rotate(-30deg);
+    opacity:1;
+  }
+  90%{
+    transform: translateX(300%) translateY(-50%) scale(2) rotate(-15deg);
+    opacity:1;
+  }
+  100%{
+    transform: translateX(300%) translateY(-50%) scale(2) rotate(-15deg);
     opacity: 0;
   }
 }
