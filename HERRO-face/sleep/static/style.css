@@ -68,7 +68,7 @@ html,body{
   background-color:#00A1FF;
   border-radius: 50%;
   left:110px;
-  bottom:10%;
+  bottom:25%;
   animation-name: up_down;
   animation-duration: 3.5s;
   animation-iteration-count: infinite;
