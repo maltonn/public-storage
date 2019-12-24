@@ -15,34 +15,51 @@ html,body{
   height:400px;
   margin:auto;
 }
+
 .eye{
   position: absolute;
-  width:200px;
-  height:200px;
-  top:-5%;
+  width:130px;
+  height:130px;
+  top:10%;
 
   background-color:#00A1FF;
   border-radius: 50%;
   z-index: 10;
-  animation-name: up_down;
-  animation-duration: 3s;
+  animation-name: up_down2;
+  animation-duration: 4.5s;
   animation-iteration-count: infinite;
-
 }
+
+.inner_eye{
+  position: absolute;
+  top:34%;
+  left:15%;
+  width:32%;
+  height:32%;
+  background-color:#00A1FF;
+  border-radius: 50%;
+  z-index: 10;
+  transform-origin: 110%;
+  animation-name: rotate_eye;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+
 #eye1{
-  left:0;
+  left:5%;
 }
 #eye2{
-  right:0;
+  right:5%;
 }
 
 .eye::after{
   content:'';
   position: absolute;
-  top:12%;
-  left:12%;
-  width:76%;
-  height:76%;
+  top:10%;
+  left:10%;
+  width:80%;
+  height:80%;
   border-radius:50%;
   background-color: white;
 }
@@ -68,9 +85,9 @@ html,body{
   background-color:#00A1FF;
   border-radius: 50%;
   left:110px;
-  bottom:10%;
+  bottom:23%;
   animation-name: up_down;
-  animation-duration: 3.5s;
+  animation-duration: 4.5s;
   animation-iteration-count: infinite;
 }
 
@@ -104,59 +121,30 @@ html,body{
     transform:translateY(0%);
   }
   50%{
-    transform:translateY(10%);
+    transform:translateY(20%);
   }
   100%{
     transform:translateY(0%);
   }
 }
 
-.z{
-  position: absolute;
-  font-size: 50px;
-  color:#00A1FF;
-  top:10%;
-  right:15%;
-  transform: rotate(-30deg);
-  z-index:20;
-  font-weight: bold;
-
-  animation-name: zzz_animetion;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-#z1{
-  animation-delay: 0s;
-}
-#z2{
-  animation-delay: 0.7s;
-}
-#z3{
-  animation-delay: 1.4s;
-}
-
-@keyframes zzz_animetion {
+@keyframes up_down2 {
   0%{
-    opacity:0;
+    transform:translateY(0%);
   }
-  39%{
-    opacity:0;
-  }
-  40%{
-    transform: translateX(0) translateY(0) scale(1) rotate(-30deg);
-    opacity:1;
-  }
-  90%{
-    transform: translateX(300%) translateY(-50%) scale(2) rotate(-15deg);
-    opacity:1;
+  50%{
+    transform:translateY(40%);
   }
   100%{
-    transform: translateX(300%) translateY(-50%) scale(2) rotate(-15deg);
-    opacity: 0;
+    transform:translateY(0%);
   }
 }
 
+@keyframes rotate_eye {
+  to{
+    transform: rotate(360deg)
+  }
+};
 
 #tmp1{
   opacity:0;

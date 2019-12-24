@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>sleep</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <div id="face">
+    <div id="eye1" class="eye">
+      <div id="ie1" class='inner_eye'>
+      </div>
+    </div>
+    <div id="eye2" class="eye">
+      <div id="ie1" class='inner_eye'>
+      </div>
+    </div>
+    <div id="mouse">
+      <dv class="inner_square is1" ></dv>
+      <dv class="inner_square is2" ></dv>
+    </div>
+  </div>
+<script>
+  transition_duration=1//s
+  delay=0.2//s
+  size=40//%
+  inner_eyes=document.getElementsByClassName('inner_eye')
+  go=()=>{
+    x=Math.random()*2-1
+    y=(Math.round(Math.random())*2-1)*Math.sqrt(1-x**2)
+    x*=(100-size)
+    y*=(100-size)
+    inner_eyes[0].style.transform="translatex("+x+"%) translateY("+y+"%)"
+    inner_eyes[1].style.transform="translatex("+x+"%) translateY("+y+"%)"
+    pos_area=[x/Math.abs(x),y/Math.abs(y)]
+    setTimeout(()=>{
+      go()
+    },(transition_duration+delay)*1000)
+  }
+  go()
+
+
+  document.addEventListener('keydown',function(e){
+    if (e.key=="e"){
+      duration_input=window.prompt('速さを指定：1回動くのに何秒かかるか\n（デフォルトは1s）')
+      delay=Number(window.prompt('速さを指定：1回動いたあと何秒止まるか\n（デフォルトは0.2s）'))
+      transition_duration=Number(duration_input)
+      inner_eyes[0].style.transitionDuration=duration_input+"s"
+      inner_eyes[1].style.transitionDuration=duration_input+"s"
+    }
+    if(e.key=="d"){
+      tmp1.style.opacity=(tmp1.style.opacity*5+1)%2*0.2
+    }
+  })
+</script>
+  <div id="tmp1"></div>
+</body>
+</html>

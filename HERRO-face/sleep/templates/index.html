@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>sleep</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <div id="face">
+    <div id="eye1" class="eye">
+      <dv class="inner_square is1" ></dv>
+      <dv class="inner_square is2" ></dv>
+    </div>
+    <div id="eye2" class="eye">
+      <dv class="inner_square is1" ></dv>
+      <dv class="inner_square is2" ></dv>
+    </div>
+    <div id="mouse">
+      <dv class="inner_square is1" ></dv>
+      <dv class="inner_square is2" ></dv>
+    </div>
+    <div id="zzz">
+      <div id="z1" class="z">Z</div>
+      <div id="z2" class="z">Z</div>
+      <div id="z3" class="z">Z</div>
+    </div>
+  </div>
+
+  <div id="tmp1"></div>
+  <script>
+    document.addEventListener('keydown',function(e){
+      if(e.key=="d"){
+        tmp1.style.opacity=(tmp1.style.opacity*5+1)%2*0.2
+      }
+    })
+  </script>
+  <!--<script src="../static/send.js"></script>-->
+</body>
+</html>
