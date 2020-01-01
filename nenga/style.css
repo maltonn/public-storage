@@ -129,7 +129,7 @@ img{
   transform: rotate(100deg);
   animation-name: rot;
   animation-duration: 1s;
-  animation-delay: 11.5s;
+  animation-delay: 10.5s;
   animation-fill-mode: forwards;
 }
 @keyframes move {
