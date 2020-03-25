@@ -1,0 +1,95 @@
+.input > ul {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.input > ul > li {
+	display: block;
+	padding-bottom: 1px;
+	width: 100%;
+	background:
+		linear-gradient(217deg, rgba(226, 0, 0, .8), rgba(226, 0, 0, 0)),
+		linear-gradient(127deg, rgba(80, 0, 192, .8), rgba(80, 0, 192, 0)),
+		linear-gradient(336deg, rgba(150, 150, 0, .8), rgba(150, 150, 0, 0));
+	background-attachment: fixed;
+}
+
+.input > ul > li > div {
+	padding: 12px;
+	height: calc(100% - 24px);
+	background: #fff;
+	color: #000;
+	text-align: center;
+}
+
+.input > ul > li > div:hover {
+	background: #eee;
+}
+
+.output > ul {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.output > ul > li {
+	display: block;
+	padding-bottom: 1px;
+	background:
+		linear-gradient(217deg, rgba(226, 0, 0, .8), rgba(226, 0, 0, 0)),
+		linear-gradient(127deg, rgba(80, 0, 192, .8), rgba(80, 0, 192, 0)),
+		linear-gradient(336deg, rgba(150, 150, 0, .8), rgba(150, 150, 0, 0));
+	background-attachment: fixed;
+}
+
+.output > ul > li > div {
+	padding: 12px;
+	height: calc(100% - 24px);
+	background: #fff;
+	color: #000;
+}
+
+.output > ul > li > div:hover {
+	background: #eee;
+}
+
+.output > ul > li > div > a {
+	font-size: 12pt;
+	text-decoration: none;
+	color: #000;
+}
+
+.output > ul > li > div > .icon {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.output > ul > li > div > .icon > img {
+	display: block;
+	width: calc(100% / 5);
+}
+
+@media screen and (min-width: 1280px) {
+	.output > ul > li {
+		width: calc(100% / 3);
+	}
+}
+
+@media screen and (min-width: 560px) and (max-width: 1279px) {
+	.output > ul > li {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 559px) {
+	.output > ul > li {
+		width: 100%;
+	}
+}

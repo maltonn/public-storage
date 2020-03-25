@@ -1,0 +1,64 @@
+.title {
+	background:
+		linear-gradient(217deg, rgba(226, 0, 0, .8), rgba(226, 0, 0, 0)),
+		linear-gradient(127deg, rgba(80, 0, 192, .8), rgba(80, 0, 192, 0)),
+		linear-gradient(336deg, rgba(150, 150, 0, .8), rgba(150, 150, 0, 0));
+	background-attachment: fixed;
+	padding: 5% 10%;
+	font-family: 'Cinzel', serif;
+}
+
+.title > h1 {
+	font-weight: normal;
+}
+.title {
+    height: 90%;
+    width: 80%;
+    color: #fff;
+    text-align: center;
+}
+
+@media screen and (min-width: 1280px) {
+    .title {
+        margin: 0 0 0 25%;
+        width: 55%;
+        height: 100%;
+        color: #fff;
+    }
+
+    .title h1 {
+        font-size: 800%;
+    }
+
+    .title p {
+        font-size: 200%;
+    }
+}
+@media screen and (min-width: 560px) and (max-width: 1279px) {
+    .title {
+        margin: 0 0 0 15%;
+        width: 65%;
+        height: 100%;
+        color: #fff;
+    }
+
+    .title h1 {
+        font-size: 500%;
+    }
+
+    .title p {
+        font-size: 200%;
+    }
+}
+
+
+@media screen and (max-width: 559px) {
+    .title h1 {
+        font-size: 200%;
+    }
+
+    .title p {
+        font-size: 50%;
+    }
+}
+
