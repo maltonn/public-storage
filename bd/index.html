@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>先進技術研究部</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="games_back"></div>
+  <div id="bar">
+    <img src="imgs/bar2.png"></img>
+    <div id="clock"></div>
+    <div id="life-left"><p>10   --:--</p></div>
+  </div>
+  <div id="games"></div>
+  <div id="main_game"></div>
+  <div id="image">
+    <h1>これはなに？</h1>
+    <p>弊校パソコン部の文化祭の展示ソフトだったものです。<br />来年はまた新しいものが作られるので、2019年度版をここに供養しておきます。<br />なお、本来であれば作品名が表示され、決定ボタンでexeが開く仕様でしたが、ローカルサーバーで動かすことが必須条件であったため、今回は有名どころのハイパーリンクに変えてあります。</p>
+    <p>（余談ですが、製作者はこれの依頼を受けた時、某ゲームにドはまりしてました）</p>
+  </div>
+  <div id="counter"></div>
+  <div id="loading" class="sk-circle none">
+    <div class="sk-circle1 sk-child"></div>
+    <div class="sk-circle2 sk-child"></div>
+    <div class="sk-circle3 sk-child"></div>
+    <div class="sk-circle4 sk-child"></div>
+    <div class="sk-circle5 sk-child"></div>
+    <div class="sk-circle6 sk-child"></div>
+    <div class="sk-circle7 sk-child"></div>
+    <div class="sk-circle8 sk-child"></div>
+    <div class="sk-circle9 sk-child"></div>
+    <div class="sk-circle10 sk-child"></div>
+    <div class="sk-circle11 sk-child"></div>
+    <div class="sk-circle12 sk-child"></div>
+  </div>
+
+<img id="play" class="play" src="imgs/play.png" />
+
+<script>
+
+raw_lst=[
+  ['Google', 'https://www.google.com/',],
+  ['Amazon','https://www.amazon.co.jp/'],
+  ['Yahoo','https://www.yahoo.co.jp/'],
+  ['twitter','https://twitter.com/home'],
+  ['Qiita','https://qiita.com/'],
+  ['Teratail','https://teratail.com/'],
+  ['AtCoder','https://atcoder.jp/'],
+
+]
+lst=[]
+for(i=0;i<raw_lst.length;i++){
+    lst.push(raw_lst[i])
+}
+
+</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

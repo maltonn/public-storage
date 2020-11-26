@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Moscwa</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+<body>
+  <div id="loading0">
+        <div class="outer">
+          <div><div></div></div>
+          <div><div></div></div>
+          <div><div></div></div>
+          <div><div></div></div>
+          <div><div></div></div>
+          <div><div></div></div>
+        </div>
+        <div class="inner">
+          <div><div></div></div>
+          <div><div></div></div>
+          <div><div></div></div>
+          <div><div></div></div>
+          <div><div></div></div>
+          <div><div></div></div>
+        </div>
+  </div>
+  <script >
+
+    bars=document.querySelectorAll('#loading0>.outer>div')
+    white_bars=document.querySelectorAll('#loading0>.outer>div>div')
+    len=bars.length
+    duration=180
+    for(i=0;i<len/2;i++){
+      bars[i].style.transform="rotate("+(360/len*i)+"deg)"
+      white_bars[i].style.animation="anime1 "+(duration*len)+"ms linear "+(i*duration)+"ms infinite"
+      bars[i+len/2].style.transform="rotate("+(360/len*(i+len/2))+"deg)"
+      white_bars[i+len/2].style.animation="anime1 "+(duration*len)+"ms linear "+(i*duration)+"ms infinite"
+    }
+    inner_bars=document.querySelectorAll('#loading0>.inner>div')
+    inner_white_bars=document.querySelectorAll('#loading0>.inner>div>div')
+    len=inner_bars.length
+    for(i=0;i<len/2;i++){
+      inner_bars[i].style.transform="rotate("+-(360/len*i)+"deg)"
+      inner_white_bars[i].style.animation="anime2 "+(duration*len)+"ms linear "+(i*duration)+"ms infinite"
+      inner_bars[i+len/2].style.transform="rotate("+-(360/len*(i+len/2))+"deg)"
+      inner_white_bars[i+len/2].style.animation="anime2 "+(duration*len)+"ms linear "+(i*duration)+"ms infinite"
+    }
+  </script>
+  <div id="loading1">
+    <div class="stage">
+      <div class="cube">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left">
+          <p>by MOSCWA</p>
+        </div>
+        <div class="right">
+          <p>限界に</p>
+        </div>
+        <div class="top">
+          <p>CSSの</p>
+        </div>
+        <div class="bottom">
+          <p>挑戦する</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="loading2">
+    <div id="st_tower">
+      <div id="stc1" class="stairs_circle">
+        <div class="stairs st1">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st2">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st3">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st4">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st5">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st6">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+      <div id="stc2" class="stairs_circle">
+        <div class="stairs st1">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st2">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st3">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st4">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st5">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st6">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+      <div id="stc3" class="stairs_circle">
+        <div class="stairs st1">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st2">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st3">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st4">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st5">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st6">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+      <div id="stc4" class="stairs_circle">
+        <div class="stairs st1">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st2">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st3">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st4">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st5">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st6">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+      <div id="stc5" class="stairs_circle">
+        <div class="stairs st1">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st2">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st3">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st4">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st5">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="stairs st6">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="loading3" class="max">
+    <div id="octahedron">
+      <div class="upper front"></div>
+      <div class="upper back"></div>
+      <div class="upper left"></div>
+      <div class="upper right"></div>
+      <div class="under front"></div>
+      <div class="under back"></div>
+      <div class="under left"></div>
+      <div class="under right"></div>
+    </div>
+  </div>
+  <div id="main">
+    <div>
+      <h1>Hello World</h1>
+    </div>
+    <div id="about">
+      <h2>About</h2>
+      <p>cssだけでどこまでできるかに挑戦したWEBサイトです<br />
+      （どう見ても最後のほう飽きてます）</p>
+    </div>
+    <div id="author">
+    <h2>Author</h2>
+    <p>
+      Name   :Moscwa<br />
+      Twitter:<a href="https://twitter.com/moscwa_">@moscwa_</a><br />
+      Github:<a href="https://github.com/moscwa">moscwa</a><br />
+      Qiita:<a href="https://qiita.com/Moscwa">@Moscwa</a><br />
+      さりとて、別に何かすごい成果を上げてるわけではありません。
+    </p>
+    </div>
+    <div></div>
+  </div>
+
+
+  <!--
+    <div id="to_main_btns">
+      <div id="to_main1" class="btn"><h2>top</h2></div>
+      <div id="to_main2" class="btn"><h2>about</h2></div>
+      <div id="to_main3" class="btn"><h2>author</h2></div>
+      <div id="to_main4" class="btn"><h2>hello</h2></div>
+    </div>
+    <div id="main1" class="max">
+      <h1>hello world!</h1>
+    </div>
+    <div id="main2" class="max">
+      <h1>About</h1>
+      <p>
+        「CSSだけでどれだけすごいものが作れるか」に挑戦したMoscwaのポートリフォサイトです。<br />
+          立体絵画やアニメーションもすべてcssで行い、WebGLやafter effectはもちろんJSライブラリさえも使っていません。<br />
+          <br />
+          <br />
+          <br />-
+      </p>
+    </div>
+    <div id="main3" class="max">
+      <h1>制作者について</h1>
+      <p>名前:Moscwa</p>
+      <p>Twitter:<a src="https://twitter.com/moscwa_">@moscwa_</a></p>
+      <p>Mail:moscwa11@gmail.com</p>
+    </div>
+    <div id="main4" class="max">
+      <h1>hello world!</h1>
+    </div>
+  </div>
+-->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/loading0.css">
+<link rel="stylesheet" href="css/loading1.css">
+<link rel="stylesheet" href="css/loading2.css">
+<link rel="stylesheet" href="css/loading3.css">
+<link rel="stylesheet" href="css/loading4.css">
+  <script src="main.js"></script>
+</body>
+
+</html>

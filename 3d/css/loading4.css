@@ -1,0 +1,14 @@
+#loading4{
+  position: absolute;
+  width:100%;
+  height:100%;
+  -webkit-perspective: 500;
+  -webkit-transform-style: preserve-3d;
+}
+#loading4>div{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 40px solid white;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>コードアート</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="form">
+    <div id="input_txt" class="max pink lighten-2">
+      <div class="file-field">
+        <div class="btn pink darken-3">
+          <span>テキストをアップロード</span>
+          <input id="code" type="file" class="input_file" id="input_textfile">
+        </div>
+        <div class="none file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <div class="input-field long">
+        <textarea id="textarea1" class="materialize-textarea"></textarea>
+        <label for="textarea1">もしくは、テキストを入力</label>
+        <a id="txt_input_done_btn" class="waves-effect waves-light btn pink darken-3">実行</a>
+      </div>
+    </div>
+    <div id="input_img" class="max light-blue lighten-1">
+      <div class="file-field" id="file-field-img">
+        <div class="btn light-blue darken-4">
+          <span>画像をアップロード</span>
+          <input id="img_file" type="file" class="input_file " id="input_imgfile">
+        </div>
+        <div class="none file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+    </div>
+    <a id="to_about" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">help_outline</i></a>
+  </div>
+  <div id="about">
+    <h1>このアプリについて</h1>
+    <p>
+      「文字から絵を作る」をテーマにした簡単なWEBアプリです。 例えば、<a href="https://abc.xyz/">abc.xyz</a>に書いてある文章とFIFAワールドカップロゴの白黒画像を合成した結果次のようになります。<br />
+      （ものすごくわかりにくいですが、拡大すると文字でできてます）
+    </p>
+    <div id="img_div">
+      <img src="img/sample.png" />
+      <div>→</div>
+      <img src="img/result.png" />
+    </div>
+  <p>注意：どういうわけか、最後の数文字だけ入らないバグが起こることがあります。<br />
+        main.jsの68行目（// 誰か助けて）のところで雑な埋め合わせをしていますが、根本的な原因がわかる方がいましたら、教えていただければ幸いです。<br />
+        開発者:<a href="https://twitter.com/moscwa_">@moscwa</a></p>
+  </div>
+  <div id="result_img_div">
+    <img id="result_img" />
+  </div>
+  <div id="download_links">
+    <a id='download_link1' class='waves-effect waves-light btn' download='dot-letter-image'><i class="material-icons left">file_download</i>Image</a>
+    <a id='download_link2' class='waves-effect waves-light btn' download='dot-letters-text'><i class="material-icons left">file_download</i>Text</a>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

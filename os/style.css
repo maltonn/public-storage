@@ -1,0 +1,29 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#window{
+    position: absolute;
+    top:0;
+    width:100%;
+    min-height:100%;
+    background: black;
+    color: white;
+}
+
+.input_line {
+    display: flex;
+}
+input{
+    background-color:black;
+    color: white;
+}
+
+.in{
+    margin-left:10px;
+}
+
+.blue{
+    color:yellow;
+}

@@ -1,0 +1,67 @@
+:root{
+  --IW:30vmin;
+  --OW:40vmin;
+}
+body{
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#innerclock i {
+  color: white;
+  line-height:var(--IW);
+  vertical-align: middle;
+  font-size: 18vmin;
+}
+
+#clock{
+  position: absolute;
+  left:calc(50vw - var(--OW)/2);
+  top:calc(50vh - var(--OW)/2);
+  width:var(--OW);
+  height:var(--OW);
+  background-color:#18FFFF;
+  border-radius: 50%;
+
+}
+#clock_half{
+  left:calc(var(--OW) / 2 );
+  background-color: #18FFFF;
+  border-radius:0 80vmin 80vmin 0;
+}
+#innerclock{
+  z-index: 10;
+  position: absolute;
+  content: "";
+  margin:calc((var(--OW) - var(--IW)) / 2);
+  width:var(--IW);
+  height:var(--IW)
+  background-color: #263238;
+  border-radius: 50%;
+  transition-duration: 300ms;
+  text-align: center;
+}
+#clock_left,#clock_right,#clock_half{
+  position: absolute;
+  content: "";
+  width:calc( var(--OW) / 2 );
+  height:var(--OW);
+}
+
+#clock_left,#clock_right{
+    z-index: 5;
+    background-color:#5F7470;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+#clock_left{/*left*/
+  transform-origin:left;
+  border-radius:0 var(--OW) var(--OW) 0;
+  left:calc( var(--OW) / 2 );
+}
+#clock_right{/*right*/
+  transform-origin:right;
+  border-radius:var(--OW) 0% 0% var(--OW);
+}

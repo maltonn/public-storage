@@ -1,0 +1,120 @@
+#loading2 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-perspective:2000px;
+}
+@media(min-width:400) {
+  #loading2{
+    -webkit-perspective: 1000px;
+  }
+}
+
+#st_tower {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition-duration: 1s;
+  transform-origin: center center -100px;
+  -webkit-transform-style: preserve-3d;
+}
+.stairs_circle{
+  position: absolute;
+  width:100%;
+  height:10px;
+  transition-duration: 500ms;
+  transform-origin: center center -100px;
+  -webkit-transform-style: preserve-3d;
+}
+
+#stc1{
+  top:10%;
+}
+#stc2{
+  top:30%;
+}
+#stc3{
+  top:50%;
+}
+#stc4{
+  top:70%;
+}
+#stc5{
+  top:90%;
+}
+.stairs {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  left: calc(50% - 100px);
+  transition-duration: 1s;
+  transform-origin: center center -100px;
+  -webkit-transform-style: preserve-3d;
+}
+.st1 {
+  transform: rotateY(0deg);
+}
+
+.st2 {
+  transform: rotateY(60deg)
+}
+
+.st3 {
+  transform: rotateY(120deg)
+}
+
+.st4 {
+  transform: rotateY(180deg)
+}
+
+.st5 {
+  transform: rotateY(-120deg)
+}
+
+.st6 {
+  transform: rotateY(-60deg)
+}
+
+.stairs>div {
+  position: absolute;
+  border: 1px solid white;
+  width: 200px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.stairs>.top, .stairs>.bottom {
+  height: 100px;
+}
+
+.stairs>.left, .stairs>.right {
+  width: 100px;
+}
+
+.stairs>.front {
+  transform: translateZ(50px);
+}
+
+.stairs>.back {
+  transform: translateZ(-50px);
+}
+
+.stairs>.right {
+  transform: rotateY(-90deg);
+  left: 150px;
+}
+
+.stairs>.left {
+  transform: rotateY(90deg);
+  right: 150px;
+}
+
+.stairs>.bottom {
+  transform: rotateX(90deg) translateZ(40px);
+}
+
+.stairs>.top {
+  transform: rotateX(90deg) translateZ(40px);
+}

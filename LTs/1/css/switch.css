@@ -1,0 +1,59 @@
+
+#white_circle {
+  z-index: 200;
+  position: absolute;
+  right: -100px;
+  bottom: -100px;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 50%;
+  transition-duration: 500ms;
+}
+
+#white_circle>div {
+  z-index: 200;
+  position: absolute;
+  bottom: 80px;
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  transform-origin: 160px;
+  transition-duration: 500ms;
+  animation-iteration-count: infinite;
+}
+#white_circle_child1{
+  animation: wcc1 4s ease-out 0ms;
+}
+@keyframes wcc1 {
+  50%{
+    transform: rotate(15deg);
+  }
+  100%{
+    transform: rotate(120deg);
+  }
+}
+#white_circle_child2{
+  animation: wcc2 4s ease-out;
+}
+@keyframes wcc2 {
+  50%{
+    transform: rotate(45deg);
+  }
+  100%{
+    transform: rotate(120deg);
+  }
+}
+#white_circle_child3{
+  animation: wcc3 4s ease-out;
+}
+@keyframes wcc3 {
+  50%{
+    transform: rotate(75deg);
+  }
+  100%{
+    transform: rotate(120deg);
+  }
+}

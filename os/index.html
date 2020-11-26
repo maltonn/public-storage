@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OSもどき</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id='window'>
+    <div>
+      <div class='output_line blue'>JSで動かすもどきOS<br>twitter:@moscwa</div><br>
+    </div>
+    <div>
+      <div class='input_line'>
+        <div class='path'>user:~/home$</div><div class='in'>help</div>
+      </div>
+      <div class='output_line'>今使えるコマンドは以下のとおりです。<br /> ls cd cat mkdir rm</div><br />
+    </div>
+    <div>
+      <div class='input_line'>
+        <div class='path'>user:~/home$</div><input id='in' class='in' autofocus>
+      </div>
+      <div class='output_line active_output'></div>
+    </div>
+    
+  </div>
+  <script src='main.js'></script>
+</body>
+
+</html>

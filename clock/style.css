@@ -1,0 +1,127 @@
+body{
+  width:100vw;
+  height:100vh;
+  margin: 0;
+  overflow: hidden;
+  background-color: #212121;
+}
+#main{
+  position: absolute;
+  width:100%;
+  height:100%;
+  transform: translateY(-100%);
+  transition-duration: 1s;
+  border-radius: 50%;
+  background-color: rgba(30,30,30,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#clock{
+  position: absolute;
+  width:80vmin;
+  height:80vmin;
+  background-color:#18FFFF;
+  border-radius: 50%;
+
+}
+#clock_half{
+  left:40vmin;
+  background-color: #18FFFF;
+  border-radius:0 80vmin 80vmin 0;
+  /*main.js　*/
+}
+#innerclock{
+  z-index: 10;
+  position: absolute;
+  content: "";
+  margin:5vmin;
+  width:70vmin;
+  height:70vmin;
+  background-color: #263238;
+  border-radius: 50%;
+  transition-duration: 300ms;
+}
+#clock_left,#clock_right,#clock_half{
+  position: absolute;
+  content: "";
+  width:40vmin;
+  height:80vmin;
+}
+
+#clock_left,#clock_right{
+    z-index: 5;
+    background-color:#5F7470;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+#clock_left{/*left*/
+  transform-origin:left;
+  border-radius:0 80vmin 80vmin 0;
+  left:40vmin;
+}
+#clock_right{/*right*/
+  transform-origin:right;
+  border-radius:80vmin 0% 0% 80vmin;
+}
+@keyframes turn360 {
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes turn180 {
+  to{
+    transform: rotate(180deg);
+  }
+}
+#display{
+  position:absolute;
+  z-index: 100;
+  font-size: 15vmin;
+  height: 100%;
+  width:100%;
+  text-align: center;
+  line-height: 70vmin;
+}
+#done{
+  position: absolute;
+  width:100vmax;
+  height:100vh;
+  transform:scale(0.01);
+  display: none;
+  border-radius: 100%;
+  transition-duration: 1s;
+  background-color: #EA80FC;
+}
+#select{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#select .time{
+    cursor: pointer;
+    position: relative;
+    top:5%;
+    margin:3vmax;
+    width:16vmax;
+    height: 16vmax;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    transition-duration: 0.5s;
+}
+#select .time:hover{
+  transform: translateY(-10%);
+}
+#select .time h3{
+  position: absolute;
+  margin-top: 30%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 4vmax;
+}

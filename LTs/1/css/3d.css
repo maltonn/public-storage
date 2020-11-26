@@ -1,0 +1,429 @@
+
+
+/*以下立方体　cube*/
+.stage {
+  position: absolute;
+  -webkit-perspective: 1000px;
+}
+.cube {
+  width: 200px;
+  height: 200px;
+  -webkit-transform-style: preserve-3d;
+  animation-duration:2s;
+  animation-fill-mode: forwards;
+}
+
+.cube>div {
+  transition-duration: 500ms;
+}
+
+@keyframes rotation {
+  33% {
+    transform: rotateX(-90deg);
+  }
+  66% {
+    transform: rotateX(-90deg) rotateZ(-90deg);
+  }
+  100% {
+    transform: rotateX(120deg) rotateZ(30deg);
+  }
+}
+
+.cube div {
+  position: absolute;
+  border: 1px solid white;
+  width: 200px;
+  height: 200px;
+  transform: translateZ(-100px);
+}
+
+.cube>.front {
+  transform: translateZ(100px);
+}
+
+.cube>.back {
+  transform: translateZ(-100px);
+}
+
+.cube>.right {
+  transform: rotateY(-90deg);
+  left: 100px;
+}
+
+.cube>.left {
+  transform: rotateY(90deg);
+  right: 100px;
+}
+
+.cube>.bottom {
+  transform: rotateX(90deg);
+  top: 100px;
+}
+
+.cube>.top {
+  transform: rotateX(90deg);
+  bottom: 100px;
+}
+
+/*
+.cube div p{
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size:40px;
+}
+.cube .bottom p{
+  transform: rotateX(180deg);
+}
+.cube .right p{
+  transform: rotateY(180deg) rotate(90deg) translateX(100px);
+}
+.cube .left p{
+  transform:rotateY(180deg) rotate(-90deg) translateX(-30px);
+}
+*/
+
+/*以下正八面体 octahedron*/
+
+#octahedron {
+  position: absolute;
+  width: 200px;
+  height: 280px;
+  -webkit-perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transition-duration: 3s;
+}
+
+#octahedron>div {
+  transition-duration: 300ms;
+}
+
+#octahedron>.upper {
+  z-index: -1;
+  position: absolute;
+  border-style: solid;
+  border-width: 0 100px 173px 100px;
+  border-color: transparent transparent rgba(1, 1, 1, .5) transparent;
+  transform-origin: top;
+}
+
+#octahedron>.upper::after {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  content: "";
+  border-style: solid;
+  border-width: 0 95px 170px 95px;
+  border-color: transparent transparent rgba(255, 255, 255, .5) transparent;
+  transform-origin: top;
+  transform: translateX(-50%);
+}
+
+#octahedron>.under {
+  position: absolute;
+  border-style: solid;
+  top: 110px;
+  border-width: 173px 100px 0 100px;
+  border-color: rgba(1, 1, 1, .5) transparent transparent transparent;
+  transform-origin: bottom;
+}
+
+#octahedron>.under::after {
+  position: absolute;
+  top: -170px;
+  left: 0;
+  content: "";
+  border-style: solid;
+  border-width: 170px 95px 0 95px;
+  border-color: rgba(255, 255, 255, .5) transparent transparent transparent;
+  transform-origin: top;
+  transform: translateX(-50%);
+}
+
+#octahedron>.upper.front {
+  transform: rotateX(35.26deg)
+}
+
+#octahedron>.upper.back {
+  transform: rotateX(-35.26deg)
+}
+
+#octahedron>.upper.left {
+  transform: rotateZ(35.26deg) rotateY(90deg);
+}
+
+#octahedron>.upper.right {
+  transform: rotateZ(-35.26deg) rotateY(90deg);
+}
+
+#octahedron>.under.front {
+  transform: rotateX(-35.26deg)
+}
+
+#octahedron>.under.back {
+  transform: rotateX(35.26deg)
+}
+
+#octahedron>.under.left {
+  transform: rotateZ(-35.26deg) rotateY(90deg);
+}
+
+#octahedron>.under.right {
+  transform: rotateZ(35.26deg) rotateY(90deg);
+}
+
+/*以下正四面体*/
+
+#teragedron {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  -webkit-perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transition-duration: 3s;
+}
+
+#teragedron>div {
+  position: absolute;
+  transition-duration: 300ms;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 150px 259.8px 150px;
+  border-color: transparent transparent rgba(2, 2, 2, .5) transparent;
+  transform-origin: bottom center;
+}
+
+#teragedron>.under {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 150px 259.8px 150px;
+  border-color: transparent transparent rgba(2, 2, 2, .5) transparent;
+  transform-origin: bottom center;
+}
+
+#teragedron>.upper {
+  top: 45px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 259.8px 150px 0 150px;
+  border-color: rgba(2, 2, 2, .5) transparent transparent transparent;
+  transform-origin: top center;
+}
+
+#teragedron>.under::after {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 140px 242.5px 140px;
+  border-color: transparent transparent rgba(255, 255, 255, .5) transparent;
+  transform-origin: bottom center;
+  transform: translateX(-50%);
+}
+
+#teragedron>.upper::after {
+  position: absolute;
+  top: -12px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 242.5px 140px 0 140px;
+  border-color: rgba(255, 255, 255, .5) transparent transparent transparent;
+  transform-origin: top center;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+#teragedron>.sfc1 {
+  transform: rotateX(-35deg);
+}
+
+#teragedron>.sfc2 {
+  transform: rotateX(35deg);
+}
+
+#teragedron>.sfc3 {
+  transform: rotateZ(35deg) rotateY(90deg);
+}
+
+#teragedron>.sfc4 {
+  transform: rotateZ(-35deg) rotateY(90deg);
+}
+
+/*以下正二十面体　phage*/
+#slide4{
+  display: flex;
+}
+#icosahedron{
+  width:300px;
+  height:300px;
+}
+#icosahedron>div{
+  -webkit-perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+}
+#icosahedron>div>div{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100px 173.2px 100px;
+  border-color: transparent transparent rgba(255,255,255,.5) transparent;
+  transform-origin: top;
+  transition-duration: 300ms;
+}
+.upper_div>div:nth-child(1){
+  transform:rotateX(30deg) rotateZ(0deg);
+}
+.upper_div>div:nth-child(2){
+  transform:rotateX(40deg) rotateZ(72deg);
+}
+.upper_div>div:nth-child(3){
+  transform:rotateX(50deg) rotateZ(144deg);
+}
+.upper_div>div:nth-child(4){
+  transform:rotateX(60deg) rotateZ(216deg);
+}
+.upper_div>div:nth-child(5){
+  transform:rotateX(70deg) rotateZ(288deg);
+}
+.upper_div>div:nth-child(1):hover{
+  transform:rotateX(30deg) rotateZ(0deg);
+}
+
+.middle_div{
+  display: none;
+}
+.under_div{
+  display: none;
+}
+
+
+
+/*final*/
+#loading2 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-perspective:2000px;
+}
+@media(min-width:400) {
+  #loading2{
+    -webkit-perspective: 1000px;
+  }
+}
+
+#st_tower {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition-duration: 1s;
+  transform-origin: center center -100px;
+  -webkit-transform-style: preserve-3d;
+}
+.stairs_circle{
+  position: absolute;
+  width:100%;
+  height:10px;
+  transition-duration: 500ms;
+  transform-origin: center center -100px;
+  -webkit-transform-style: preserve-3d;
+}
+
+#stc1{
+  top:10%;
+}
+#stc2{
+  top:30%;
+}
+#stc3{
+  top:50%;
+}
+#stc4{
+  top:70%;
+}
+#stc5{
+  top:90%;
+}
+.stairs {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  left: calc(50% - 100px);
+  transition-duration: 1s;
+  transform-origin: center center -100px;
+  -webkit-transform-style: preserve-3d;
+}
+.st1 {
+  transform: rotateY(0deg);
+}
+
+.st2 {
+  transform: rotateY(60deg)
+}
+
+.st3 {
+  transform: rotateY(120deg)
+}
+
+.st4 {
+  transform: rotateY(180deg)
+}
+
+.st5 {
+  transform: rotateY(-120deg)
+}
+
+.st6 {
+  transform: rotateY(-60deg)
+}
+
+.stairs>div {
+  position: absolute;
+  border: 1px solid white;
+  width: 200px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.stairs>.top, .stairs>.bottom {
+  height: 100px;
+}
+
+.stairs>.left, .stairs>.right {
+  width: 100px;
+}
+
+.stairs>.front {
+  transform: translateZ(50px);
+}
+
+.stairs>.back {
+  transform: translateZ(-50px);
+}
+
+.stairs>.right {
+  transform: rotateY(-90deg);
+  left: 150px;
+}
+
+.stairs>.left {
+  transform: rotateY(90deg);
+  right: 150px;
+}
+
+.stairs>.bottom {
+  transform: rotateX(90deg) translateZ(40px);
+}
+
+.stairs>.top {
+  transform: rotateX(90deg) translateZ(40px);
+}

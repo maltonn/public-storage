@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSSと3Dの話</title>
+  <link rel="stylesheet" href="css/intro.css">
+  <link rel="stylesheet" href="css/switch.css">
+  <link rel="stylesheet" href="css/3d.css">
+</head>
+<body>
+  <div id="white_circle">
+    <div id="white_circle_child1"></div>
+    <div id="white_circle_child2"></div>
+    <div id="white_circle_child3"></div>
+  </div>
+  <h2 id="slide_exp"></h2>
+  <h2 id="twitter">@Moscwa_</h2>
+  <div id="intro_slide1" class="intro slide">
+    <h1>CSSと3Dのはなし</h1>
+  </div>
+  <div id="intro_slide2" class="intro slide">
+    <h2>自己紹介</h2>
+    <h4>名前：Moscwa</h4>
+    <h4>twitter：@moscwa_</h4>
+    <p>
+      いろんなことに手を出してる初心者プログラマ。
+      <br />yui540さんにあこがれてCSSアニメーターを目指すも、デザインセンスのなさに気づき挫折。
+      <br />とはいえ諦めきれず、3D×CSS-animationなら希望があるのでは？と思い立って今回。
+      <br />最近ひそかに機械学習を始めました。
+    </p>
+  </div>
+  <div id="intro_slide3" class="intro slide">
+    <h2>そもそもなんでCSSで3D?</h2>
+    <ul id="melit_list">
+      <li>単純にCSSの限界に挑戦してみたかった。</li>
+      <li>VR/MRがはやる中で、これからはウェブページも3Dの時代だ！</li>
+      <li>今時cssとか(笑) Bootstrapでよくない？　とかいう人に本場のCSSを見せてやりたい！</li>
+    </ul>
+  </div>
+  <div id="slide1" class="slide">
+      <div class="stage">
+          <div id="cube1" class="cube">
+              <div id="front"></div>
+              <div id="back"></div>
+              <div id="left"></div>
+              <div id="right"></div>
+              <div id="top"></div>
+              <div id="bottom"></div>
+          </div>
+      </div>
+    </div>
+      <div id="slide2" class="slide">
+        <div id="octahedron">
+          <div id="front" class="upper"></div>
+          <div id="back" class="upper"></div>
+          <div id="left" class="upper"></div>
+          <div id="right" class="upper"></div>
+          <div id="front" class="under"></div>
+          <div id="back" class="under"></div>
+          <div id="left" class="under"></div>
+          <div id="right" class="under"></div>
+        </div>
+      </div>
+      <div id="slide3" class="slide">
+        <div id="teragedron">
+          <div id="sfc1"></div>
+          <div id="sfc2" ></div>
+          <div id="sfc3"></div>
+          <div id="sfc4"></div>
+        </div>
+      </div>
+<!--
+    <div id="slide4" class="slide">
+      <div id="icosahedron">
+        <div class="upper_div">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="middle_div">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="under_div">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+        -->
+    <div id="final" class="slide">
+        <div id="loading2">
+          <div id="st_tower">
+            <div id="stc1" class="stairs_circle">
+              <div class="stairs st1">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st2">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st3">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st4">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st5">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st6">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+            </div>
+            <div id="stc2" class="stairs_circle">
+              <div class="stairs st1">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st2">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st3">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st4">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st5">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st6">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+            </div>
+            <div id="stc3" class="stairs_circle">
+              <div class="stairs st1">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st2">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st3">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st4">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st5">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st6">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+            </div>
+            <div id="stc4" class="stairs_circle">
+              <div class="stairs st1">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st2">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st3">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st4">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st5">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st6">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+            </div>
+            <div id="stc5" class="stairs_circle">
+              <div class="stairs st1">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st2">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st3">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st4">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st5">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+              <div class="stairs st6">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+    <div id="summary" class="intro slide">
+      <h2>結論</h2>
+      <ul id="summary_list">
+        <li>CSSでも3Dの表現はできる！</li>
+        <li>とはいえ、1個1個transfotmを指定しなきゃいけないので、半端なく時間がかかる</li>
+        <li>とりあえず、3Dならそれ専門のソフトを使うのがいいです。</li>
+        <li>間違ってもCSSでT2ファージ作ろうとか考えるな！</li>
+      </ul>
+    </div>
+    <div id="end" class="intro slide">
+      <h3>ご清聴ありがとうございました！</h3>
+      <h4>なお、今回のスライドは、https://moscwa.github.io/LT1 で見られます</h4>
+    </div>
+    <div></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
