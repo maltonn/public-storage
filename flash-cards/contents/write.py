@@ -1,6 +1,7 @@
 import csv
 with open ('contents.csv','r',encoding='utf-8_sig') as f:
     lst=list(csv.reader(f))
+lst.sort()
 
 questions=[line[0] for line in lst]
 answers=[line[1] for line in lst]
