@@ -1,1 +1,26 @@
-https://discordapp.com/api/webhooks/1285160204912033806/GMK2rOjc83BedaFAJV6EgYPdrH4KdgN59MpGK9taJrB2ztG9N-ZtmTkaRsudP428IFX6
+
+
+import requests
+import json
+
+# Webhook URLを指定します
+webhook_url = 'https://discordapp.com/api/webhooks/1285160204912033806/GMK2rOjc83BedaFAJV6EgYPdrH4KdgN59MpGK9taJrB2ztG9N-ZtmTkaRsudP428IFX6'
+
+# 送信するメッセージの内容を指定します
+message = {
+    'content': 'こんにちは！これはWebhookを使って送信したメッセージです。'
+}
+
+# POSTリクエストを送信します
+response = requests.post(
+    webhook_url,
+    data=json.dumps(message),
+    headers={'Content-Type': 'application/json'}
+)
+
+# レスポンスのステータスコードを表示します
+if response.status_code == 204:
+    print('メッセージが正常に送信されました。')
+else:
+    print(f'エラーが発生しました。ステータスコード: {response.status_code}')
+    print('レスポンス内容:', response.text)
