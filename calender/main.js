@@ -17,7 +17,7 @@ function renderCalendar() {
     const month = currentDate.getMonth();
     const firstDay = new Date(year, month, 1).getDay();
     const lastDate = new Date(year, month + 1, 0).getDate();
-    const StartDurationDate=new Date(localStorage.getItem('start'));
+    const StartDurationDate=localStorage.getItem('start') ? new Date(localStorage.getItem('start')) : null;
 
     monthYear.textContent = `${year}年 ${month + 1}月`;
 
