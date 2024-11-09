@@ -1,0 +1,102 @@
+#read_this_book,
+#go_to_next_book {
+    opacity: 0;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+#kak{
+    opacity: 0;
+    transition-duration: 300ms;
+}
+#ink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, 0) scale(0.0);
+    border-radius: 100%;
+    background-color: black;
+    transition-duration: 1s;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ink.active {
+    transform: translate(0, 0) scale(1.0);
+    border-radius: 0;
+}
+
+#ink > *{
+    color: white;
+    writing-mode: vertical-rl;
+}
+
+#author{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 30px;
+    font-size: 1.5em;
+}
+
+#xbtn {
+    position:absolute;
+    display: block;
+    width: 70px;
+    height: 70px;
+    right: 0;
+    top: 0;
+}
+
+#xbtn::before,
+#xbtn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 50px;
+    background: white;
+}
+
+#xbtn::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#xbtn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* HTML: <div class="loader"></div> */
+#loader {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    color: #514b82;
+    background: 
+      conic-gradient(from 90deg at 3px 3px,#0000 90deg,currentColor 0)
+      -3px -3px/calc(50% + 1.5px) calc(50% + 1.5px);
+    animation: l28 2s infinite;
+  }
+  #loader::before,
+  #loader::after {
+    content: "";
+    grid-area: 1/1;
+    background: repeating-conic-gradient(#0000 0 35deg,currentColor 0 90deg);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+    border-radius: 50%;
+  }
+  #loader::after {
+    margin: 20%;
+  }
+  @keyframes l28 {
+    100% {transform: rotate(1turn)}
+  }
