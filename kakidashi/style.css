@@ -12,8 +12,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate(-50%, 0) scale(0.0);
-    border-radius: 100%;
+    transform: translate(0, -100%);
     background-color: black;
     transition-duration: 1s;
     width: 100vw;
@@ -26,7 +25,6 @@
 
 #ink.active {
     transform: translate(0, 0) scale(1.0);
-    border-radius: 0;
 }
 
 #ink > *{
