@@ -35,7 +35,11 @@ function randInt(max) {
 
 function callback() {
   r = randInt(data.length);
-  kakidashi = data[r][6] || data[r][5];
+  kakidashi = data[r][6]
+  if (data[r][0]=='禁' || !kakidashi) {
+    callback()
+    return
+  }
   document.getElementById('title').innerText = data[r][1];
   document.getElementById('author').innerText = data[r][2];
 
