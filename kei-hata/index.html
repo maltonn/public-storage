@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeiHata</title>
+    <script src="main.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>KeiHata会場</h1>
+    <div>
+        <input type="text" id="name" placeholder="名前を入力"></input>
+        <div>同じ名前を入れた場合上書きされます。</div>
+        <br>
+
+        <div class="option-div">
+            <div>ゼミ内発表会に来ない-卒業できない</div>
+            <div id="ods0">オッズ：？</div>
+            <input type="number" id="opt0" placeholder="ウラーを入力" ></input>
+        </div>
+        <div class="option-div">
+            <div>ゼミ内発表会に来ない-卒業できる</div>
+            <div id="ods1">オッズ：？</div>
+            <input type="number" id="opt1" placeholder="ウラーを入力"></input>
+        </div>
+        <div class="option-div">
+            <div>ゼミ内発表会に来る-卒業できる</div>
+            <div id="ods2">オッズ：？</div>
+            <input type="number" id="opt2" placeholder="ウラーを入力"></input>
+        </div>
+        <div class="option-div">
+            <div>ゼミ内発表会に来る-卒業できない</div>
+            <div id="ods3">オッズ：？</div>
+            <input type="number" id="opt3" placeholder="ウラーを入力"></input>
+        </div>
+    </div>
+    <button id="submit">投票！！</button>
+</body>
+</html>
