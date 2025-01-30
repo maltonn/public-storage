@@ -74,10 +74,10 @@ function ReloadOds(){
     
             let total_sum = opt_sums[0] + opt_sums[1] + opt_sums[2] + opt_sums[3]
     
-            document.getElementById('ods0').innerText = "オッズ："+total_sum*0.9 / opt_sums[0].toPrecision(3) + "倍"
-            document.getElementById('ods1').innerText = "オッズ："+total_sum*0.9 / opt_sums[1].toPrecision(3) + "倍"
-            document.getElementById('ods2').innerText = "オッズ："+total_sum*0.9 / opt_sums[2].toPrecision(3) + "倍"
-            document.getElementById('ods3').innerText = "オッズ："+total_sum*0.9 / opt_sums[3].toPrecision(3) + "倍"
+            document.getElementById('ods0').innerText = "オッズ："+(total_sum*0.9 / opt_sums[0]).toPrecision(3) + "倍"
+            document.getElementById('ods1').innerText = "オッズ："+(total_sum*0.9 / opt_sums[1]).toPrecision(3) + "倍"
+            document.getElementById('ods2').innerText = "オッズ："+(total_sum*0.9 / opt_sums[2]).toPrecision(3) + "倍"
+            document.getElementById('ods3').innerText = "オッズ："+(total_sum*0.9 / opt_sums[3]).toPrecision(3) + "倍"
         });
     });   
 }
