@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>3段カウンター</title>
+    <style>
+        /* 全体の設定 */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100dvh; /* 画面いっぱいの高さ */
+            display: flex;
+            flex-direction: column; /* 上から順に並べる */
+            font-family: sans-serif;
+            overflow: hidden;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* 各カウンターのエリア共通設定 */
+        .counter-area {
+            flex: 1; /* 3つのエリアを均等な高さにする */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-bottom: 1px solid #ccc; /* 区切り線 */
+        }
+        
+        /* 一番下の線は不要なので消す */
+        .counter-area:last-child {
+            border-bottom: none;
+        }
+
+        /* エリアごとの背景色 */
+        #top-area { background-color: #e3f2fd; }   /* 青系 */
+        #middle-area { background-color: #e8f5e9; } /* 緑系（追加） */
+        #bottom-area { background-color: #ffebee; }  /* 赤系 */
+
+        /* 操作パネル */
+        .control-panel {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* 少し狭く調整 */
+        }
+
+        /* 数字の表示 */
+        .count-display {
+            font-size: 3.5rem; /* 3段になるので少し文字サイズを調整 */
+            font-weight: bold;
+            width: 3ch;
+            text-align: center;
+            color: #333;
+        }
+
+        /* ボタンのデザイン */
+        button {
+            width: 70px; /* 3段用に少し小さく調整 */
+            height: 70px;
+            font-size: 2rem;
+            border: none;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            touch-action: manipulation;
+            transition: transform 0.1s;
+        }
+
+        button:active {
+            transform: scale(0.95);
+            background-color: #f0f0f0;
+        }
+
+        .btn-minus { color: #d32f2f; }
+        .btn-plus { color: #1976d2; }
+
+    </style>
+</head>
+<body>
+
+    <div id="top-area" class="counter-area">
+        <div class="control-panel">
+            <button class="btn-minus" onclick="updateCount('count-top', -1)">−</button>
+            <span id="count-top" class="count-display">0</span>
+            <button class="btn-plus" onclick="updateCount('count-top', 1)">＋</button>
+        </div>
+    </div>
+
+    <div id="middle-area" class="counter-area">
+        <div class="control-panel">
+            <button class="btn-minus" onclick="updateCount('count-middle', -1)">−</button>
+            <span id="count-middle" class="count-display">0</span>
+            <button class="btn-plus" onclick="updateCount('count-middle', 1)">＋</button>
+        </div>
+    </div>
+
+    <div id="bottom-area" class="counter-area">
+        <div class="control-panel">
+            <button class="btn-minus" onclick="updateCount('count-bottom', -1)">−</button>
+            <span id="count-bottom" class="count-display">0</span>
+            <button class="btn-plus" onclick="updateCount('count-bottom', 1)">＋</button>
+        </div>
+    </div>
+
+    <script>
+        function updateCount(elementId, change) {
+            const display = document.getElementById(elementId);
+            let currentCount = parseInt(display.innerText);
+            currentCount += change;
+            display.innerText = currentCount;
+        }
+    </script>
+</body>
+</html>
