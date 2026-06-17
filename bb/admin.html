@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者パネル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container admin-container">
+        <div id="candidate-counter" class="info-banner">参加人数: 0人</div>
+        <div id="participant-list" class="participant-names"></div>
+
+        <div class="admin-actions">
+            <button id="btn-update" class="admin-btn update-btn">更新 (Update Flag)</button>
+            <button id="btn-confirm" class="admin-btn confirm-btn">確定 (Resolve Ownership)</button>
+            <div class="settlement-config">
+                <label for="total-budget">合計金額 (精算用):</label>
+                <input type="number" id="total-budget" placeholder="例: 15000" step="100">
+            </div>
+            <button id="btn-settle" class="admin-btn settle-btn">精算 (Calculate Totals)</button>
+            
+            <div id="settlement-results" class="results-area" style="display: none;">
+                <h3>集計結果 (合計値が高い順)</h3>
+                <ul id="results-list"></ul>
+            </div>
+        </div>
+
+        <div class="danger-zone">
+            <button id="btn-reset" class="admin-btn reset-btn">リセット (Wipe All)</button>
+        </div>
+
+        <div class="editor-section">
+            <h2>JSON Direct Editor</h2>
+            <textarea id="json-editor" spellcheck="false" placeholder="Loading JSON..."></textarea>
+            <button id="btn-save-json" class="admin-btn save-btn">JSONをアップロード (Save JSON)</button>
+        </div>
+
+        <div id="admin-status">Connecting to database...</div>
+        <div style="margin-top: 20px; text-align: center;">
+            <a href="index.html" style="color: #007bff; text-decoration: none;">&larr; Back to Item List</a>
+        </div>
+    </div>
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

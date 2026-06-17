@@ -1,0 +1,217 @@
+{
+    "room1": {
+        "update_flag": 0,
+        "data": {
+            "1": {
+                "name": "餃子",
+                "r": 1,
+                "price": "181円",
+                "candidates": [],
+                "own": ""
+            },
+            "2": {
+                "name": "にんにく激増し餃子",
+                "r": 1,
+                "price": "209円",
+                "candidates": [],
+                "own": ""
+            },
+            "3": {
+                "name": "にんにくゼロ生姜餃子",
+                "r": 1,
+                "price": "181円",
+                "candidates": [],
+                "own": ""
+            },
+            "4": {
+                "name": "極王鶏の唐揚",
+                "r": 1,
+                "price": "583円",
+                "candidates": [],
+                "own": ""
+            },
+            "5": {
+                "name": "極王海老のチリソース",
+                "r": 1,
+                "price": "726円",
+                "candidates": [],
+                "own": ""
+            },
+            "6": {
+                "name": "極王酢豚",
+                "r": 1,
+                "price": "594円",
+                "candidates": [],
+                "own": ""
+            },
+            "7": {
+                "name": "極王回鍋肉(ホイコーロー)",
+                "r": 1,
+                "price": "583円",
+                "candidates": [],
+                "own": ""
+            },
+            "8": {
+                "name": "極王麻婆豆腐",
+                "r": 1,
+                "price": "594円",
+                "candidates": [],
+                "own": ""
+            },
+            "9": {
+                "name": "極王天津炒飯",
+                "r": 1,
+                "price": "748円",
+                "candidates": [],
+                "own": ""
+            },
+            "10": {
+                "name": "鶏の唐揚",
+                "r": 1,
+                "price": "390円",
+                "candidates": [],
+                "own": ""
+            },
+            "11": {
+                "name": "スゴ辛チキン",
+                "r": 1,
+                "price": "412円",
+                "candidates": [],
+                "own": ""
+            },
+            "12": {
+                "name": "油淋鶏(ユーリンチー)",
+                "r": 1,
+                "price": "393円",
+                "candidates": [],
+                "own": ""
+            },
+            "13": {
+                "name": "海老の天ぷら",
+                "r": 1,
+                "price": "429円",
+                "candidates": [],
+                "own": ""
+            },
+            "14": {
+                "name": "ニラレバ炒め",
+                "r": 1,
+                "price": "370円",
+                "candidates": [],
+                "own": ""
+            },
+            "15": {
+                "name": "海老のチリソース",
+                "r": 1,
+                "price": "466円",
+                "candidates": [],
+                "own": ""
+            },
+            "16": {
+                "name": "野菜炒め",
+                "r": 1,
+                "price": "370円",
+                "candidates": [],
+                "own": ""
+            },
+            "17": {
+                "name": "酢豚",
+                "r": 1,
+                "price": "385円",
+                "candidates": [],
+                "own": ""
+            },
+            "18": {
+                "name": "回鍋肉(ホイコーロー)",
+                "r": 1,
+                "price": "365円",
+                "candidates": [],
+                "own": ""
+            },
+            "19": {
+                "name": "麻婆豆腐",
+                "r": 1,
+                "price": "359円",
+                "candidates": [],
+                "own": ""
+            },
+            "20": {
+                "name": "ホルモンの味噌炒め",
+                "r": 1,
+                "price": "325円",
+                "candidates": [],
+                "own": ""
+            },
+            "21": {
+                "name": "カニ玉",
+                "r": 1,
+                "price": "359円",
+                "candidates": [],
+                "own": ""
+            },
+            "22": {
+                "name": "豚キムチ",
+                "r": 1,
+                "price": "341円",
+                "candidates": [],
+                "own": ""
+            },
+            "23": {
+                "name": "肉と玉子のいりつけ",
+                "r": 1,
+                "price": "370円",
+                "candidates": [],
+                "own": ""
+            },
+            "24": {
+                "name": "炒飯",
+                "r": 1,
+                "price": "371円",
+                "candidates": [],
+                "own": ""
+            },
+            "25": {
+                "name": "天津飯",
+                "r": 1,
+                "price": "398円",
+                "candidates": [],
+                "own": ""
+            },
+            "26": {
+                "name": "揚げそば",
+                "r": 1,
+                "price": "477円",
+                "candidates": [],
+                "own": ""
+            },
+            "27": {
+                "name": "餃子の王将ラーメン",
+                "r": 1,
+                "price": "495円",
+                "candidates": [],
+                "own": ""
+            },
+            "28": {
+                "name": "春巻",
+                "r": 1,
+                "price": "187円",
+                "candidates": [],
+                "own": ""
+            },
+            "29": {
+                "name": "ごま団子",
+                "r": 1,
+                "price": "110円",
+                "candidates": [],
+                "own": ""
+            },
+            "30": {
+                "name": "シャウエッセン®",
+                "r": 1,
+                "price": "275円",
+                "candidates": [],
+                "own": ""
+            }
+        }
+    }
+}
