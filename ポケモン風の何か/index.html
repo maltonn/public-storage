@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バトルシーン</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #98c5e9;
+    font-family: Arial, sans-serif;
+  }
+
+  .battle-field {
+    width: 600px;
+    height: 400px;
+    background: linear-gradient(to bottom, #d0f4b1, #a1d76a);
+    position: relative;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .field-circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .enemy-field {
+    width: 150px;
+    height: 50px;
+    top: 130px;
+    left: 70px;
+    transform: rotateX(45deg);
+  }
+
+  .player-field {
+    width: 150px;
+    height: 50px;
+    bottom: 100px;
+    right: 70px;
+    transform: rotateX(45deg);
+  }
+
+  .pokemon {
+    position: absolute;
+  }
+
+  .enemy-pokemon {
+    bottom: 220px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .player-pokemon {
+    bottom: 60px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .dialog-box {
+    width: 560px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 2px solid #333;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<div class="battle-field">
+  <div class="field-circle enemy-field"></div>
+  <div class="field-circle player-field"></div>
+  <img src="enemy-pokemon.png" alt="ヒコザル" class="pokemon enemy-pokemon">
+  <img src="player-pokemon.png" alt="ポッチャマ" class="pokemon player-pokemon">
+  <div class="dialog-box">
+    あいての ヒコザルの ひのこ！
+  </div>
+</div>
+
+</body>
+</html>
