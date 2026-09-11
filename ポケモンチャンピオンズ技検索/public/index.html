@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポケモンチャンピオンズ 技・特性 複合検索ポータル | PKMN Champions</title>
+    <meta name="description"
+        content="ポケモンチャンピオンズ向けの対戦環境・技＆特性複合検索ウェブアプリケーション。リアルタイムドロップダウン検索と詳細なステータスソートを備えた次世代アナリティクスツールです。">
+    <!-- Google Fonts: Outfit & Noto Sans JP for Premium Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Main Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="icons/types/steel.svg">
+</head>
+
+<body>
+    <div class="app-background-glow"></div>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-area">
+                <!-- <div class="logo-icon">⚡</div> -->
+                <div class="logo-text">
+                    <h1>ポケモンチャンピオンズ 技・特性 複合検索</h1>
+                    <!-- <p class="subtitle">ポケモンチャンピオンズ 技・特性 複合検索システム</p> -->
+                </div>
+            </div>
+            <!-- <div class="header-status">
+                <span class="status-badge" id="app-status">SYSTEM ONLINE</span>
+            </div> -->
+        </header>
+
+        <main class="main-content">
+            <!-- 左画面: 技 / 特性選択エリア -->
+            <section class="pane left-pane" id="pane-selection" aria-labelledby="heading-selection">
+                <div class="pane-header">
+                    <h2 id="heading-selection">
+                        検索条件
+                    </h2>
+                    <div class="tab-navigation">
+                        <button type="button" class="tab-btn active" data-target="tab-moves-abilities">技・特性</button>
+                        <button type="button" class="tab-btn" data-target="tab-type-matchup">タイプ相性</button>
+                    </div>
+                </div>
+
+                <div class="tab-content-container">
+                    <!-- タブ 1: 技・特性選択 -->
+                    <div class="tab-pane active" id="tab-moves-abilities">
+                        <div class="slots-container">
+                            <!-- スロット 0 -->
+                            <article class="selection-slot" id="slot-container-0">
+                                <div class="slot-top">
+                                    <span class="slot-number">SLOT 01</span>
+                                    <button type="button" class="btn-clear-slot" id="clear-btn-0" aria-label="スロット1をクリア"
+                                        style="display: none;">解除 ✕</button>
+                                </div>
+                                <div class="search-box-wrapper">
+                                    <div class="input-wrapper">
+                                        <input type="text" id="search-input-0" class="search-input"
+                                            placeholder="技または特性を入力 (ひらがな/カタカナ対...)" autocomplete="off" aria-label="スロット1 検索入力">
+                                    </div>
+                                    <ul class="dropdown-list" id="dropdown-list-0" role="listbox" style="display: none;"></ul>
+                                </div>
+                                <div class="selected-card-display" id="selected-display-0">
+                                    <div class="empty-placeholder">
+                                        <span>上部の入力欄から技または特性を検索してセット</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- スロット 1 -->
+                            <article class="selection-slot" id="slot-container-1">
+                                <div class="slot-top">
+                                    <span class="slot-number">SLOT 02</span>
+                                    <button type="button" class="btn-clear-slot" id="clear-btn-1" aria-label="スロット2をクリア"
+                                        style="display: none;">解除 ✕</button>
+                                </div>
+                                <div class="search-box-wrapper">
+                                    <div class="input-wrapper">
+                                        <input type="text" id="search-input-1" class="search-input"
+                                            placeholder="技または特性を入力 (ひらがな/カタカナ対...)" autocomplete="off" aria-label="スロット2 検索入力">
+                                    </div>
+                                    <ul class="dropdown-list" id="dropdown-list-1" role="listbox" style="display: none;"></ul>
+                                </div>
+                                <div class="selected-card-display" id="selected-display-1">
+                                    <div class="empty-placeholder">
+                                        <span>上部の入力欄から技または特性を検索してセット</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- スロット 2 -->
+                            <article class="selection-slot" id="slot-container-2">
+                                <div class="slot-top">
+                                    <span class="slot-number">SLOT 03</span>
+                                    <button type="button" class="btn-clear-slot" id="clear-btn-2" aria-label="スロット3をクリア"
+                                        style="display: none;">解除 ✕</button>
+                                </div>
+                                <div class="search-box-wrapper">
+                                    <div class="input-wrapper">
+                                        <input type="text" id="search-input-2" class="search-input"
+                                            placeholder="技または特性を入力 (ひらがな/カタカナ対...)" autocomplete="off" aria-label="スロット3 検索入力">
+                                    </div>
+                                    <ul class="dropdown-list" id="dropdown-list-2" role="listbox" style="display: none;"></ul>
+                                </div>
+                                <div class="selected-card-display" id="selected-display-2">
+                                    <div class="empty-placeholder">
+                                        <span>上部の入力欄から技または特性を検索してセット</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- タブ 2: タイプ相性検索 -->
+                    <div class="tab-pane" id="tab-type-matchup">
+                        <div class="type-matchup-header">
+                            <p class="type-matchup-desc">各タイプごとに受けるダメージ倍率を選択してください。複数選択可。<br>未選択または全て選択の場合はそのタイプでの絞り込みを行いません。</p>
+                            <button type="button" id="btn-clear-type-matchup" class="btn-clear-type-matchup">すべてリセット ✕</button>
+                        </div>
+                        <div class="type-matchup-grid" id="type-matchup-grid">
+                            <!-- JSにより動的描画 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 中央画面: ポケモン一覧エリア -->
+            <section class="pane center-pane" id="pane-results" aria-labelledby="heading-results">
+                <div class="pane-header results-header">
+                    <h2 id="heading-results">該当ポケモン一覧</h2>
+                    <div class="header-controls">
+                        <div class="pokemon-search-wrapper">
+                            <input type="text" id="pokemon-search-input" class="pokemon-search-input"
+                                placeholder="ポケモン名 (ひらがな/カタカナ)" autocomplete="off" aria-label="ポケモン名で絞り込み">
+                            <button type="button" class="btn-clear-search" id="clear-pokemon-search" aria-label="名前検索を解除"
+                                style="display: none;">✕</button>
+                        </div>
+                        <label class="exclude-mega-label">
+                            <input type="checkbox" id="exclude-mega-checkbox" class="exclude-mega-checkbox">
+                            <span>メガを除く</span>
+                        </label>
+                        <div class="result-count-wrapper">
+                            <span id="result-count-label" class="result-count">全ポケモン表示中</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="pokemon-table" id="pokemon-table">
+                        <thead>
+                            <tr>
+                                <th class="col-type" scope="col">タイプ</th>
+                                <th class="col-name sortable" id="th-name" scope="col" tabindex="0" role="button"
+                                    aria-label="ポケモン名で並び替え">ポケモン名 <span class="sort-arrow"></span></th>
+                                <th class="col-stat sortable" id="th-hp" scope="col" tabindex="0" role="button"
+                                    aria-label="HPで並び替え">HP <span class="sort-arrow"></span></th>
+                                <th class="col-stat sortable" id="th-atk" scope="col" tabindex="0" role="button"
+                                    aria-label="攻撃で並び替え">攻撃 <span class="sort-arrow"></span></th>
+                                <th class="col-stat sortable" id="th-def" scope="col" tabindex="0" role="button"
+                                    aria-label="防御で並び替え">防御 <span class="sort-arrow"></span></th>
+                                <th class="col-stat sortable" id="th-spa" scope="col" tabindex="0" role="button"
+                                    aria-label="特攻で並び替え">特攻 <span class="sort-arrow"></span></th>
+                                <th class="col-stat sortable" id="th-spd" scope="col" tabindex="0" role="button"
+                                    aria-label="特防で並び替え">特防 <span class="sort-arrow"></span></th>
+                                <th class="col-stat sortable" id="th-spe" scope="col" tabindex="0" role="button"
+                                    aria-label="素早さで並び替え">素早 <span class="sort-arrow"></span></th>
+                                <th class="col-stat sortable" id="th-durability" scope="col" tabindex="0" role="button"
+                                    aria-label="耐久値で並び替え" title="計算上の両受け耐久指数(E)">耐久値 <span class="sort-arrow"></span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="pokemon-table-body">
+                            <!-- JSにより動的描画 -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 右画面: ポケモン詳細エリア -->
+            <section class="pane right-pane" id="pane-detail" aria-labelledby="heading-detail">
+                <div class="pane-header">
+                    <h2 id="heading-detail">ポケモン詳細</h2>
+                </div>
+                <div class="detail-content" id="detail-content">
+                    <div class="detail-placeholder">
+                        <span class="placeholder-icon">🔍</span>
+                        <p>中央のリストからポケモンをクリックして詳細情報を表示</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- 
+        <footer class="app-footer">
+            <p>&copy; 2026 PKMN CHAMPIONS PROJECT. RUNNING ON STATIC HIGH-PERFORMANCE ENGINE.</p>
+        </footer> -->
+    </div>
+
+    <!-- Data JS Scripts (Constants Loaded in Global Scope) -->
+    <script src="data/pokemon.js"></script>
+    <script src="data/moves.js"></script>
+    <script src="data/abilities.js"></script>
+    <script src="data/learnsets.js"></script>
+    <script src="data/types.js"></script>
+    <script src="data/items.js"></script>
+    <script src="data/natures.js"></script>
+    <script src="data/conditions.js"></script>
+    <!-- Application Core Script -->
+    <script src="app.js"></script>
+</body>
+
+</html>
